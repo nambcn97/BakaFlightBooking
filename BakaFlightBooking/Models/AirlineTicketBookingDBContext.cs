@@ -1,5 +1,6 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using BakaFlightBooking.DAO;
 using BakaFlightBooking.Models.Mapping;
 
 namespace BakaFlightBooking.Models
@@ -8,12 +9,14 @@ namespace BakaFlightBooking.Models
     {
         static AirlineTicketBookingDBContext()
         {
-            Database.SetInitializer<AirlineTicketBookingDBContext>(null);
+            Database.SetInitializer(new DbInitializer());
         }
 
         public AirlineTicketBookingDBContext()
-            : base("Name=AirlineTicketBookingDBContext")
+            : base("name=AirlineTicketBookingDBContext")
         {
+            Database.SetInitializer(new DbInitializer());
+            //Database.SetInitializer<AirlineTicketBookingDBContext>(null);
         }
 
         public DbSet<Airplane> Airplanes { get; set; }

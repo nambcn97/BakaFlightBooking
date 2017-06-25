@@ -7,11 +7,12 @@ using BakaFlightBooking.Models;
 
 namespace BakaFlightBooking.DAO
 {
-    public class DbInitializer : DropCreateDatabaseIfModelChanges<AirlineTicketBookingDBContext>
+    public class DbInitializer : CreateDatabaseIfNotExists<AirlineTicketBookingDBContext>
     {
         protected override void Seed(AirlineTicketBookingDBContext context)
         {
             context.Users.Add(new User() { PassengerID = null, Username = "admin", Password = "admin", Type = "admin" });
+            context.SaveChanges();
 
             context.Locations.Add(new Location() { City = "HN", State_Province = "Ha Noi", Country = "Viet Nam" });
             context.Locations.Add(new Location() { City = "HCM", State_Province = "Ho Chi Minh", Country = "Viet Nam" });
@@ -33,7 +34,7 @@ namespace BakaFlightBooking.DAO
             context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 1, Name = "Premium Class" });
             context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 1, Name = "Economy Class" });
             context.SaveChanges();
-            base.Seed(context);
+            //base.Seed(context);
         }
     }
 }
