@@ -30,9 +30,9 @@ namespace BakaFlightBooking.DAO
             context.SaveChanges();
 
             context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 1, Name = "First Class" });
-            context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 1, Name = "Business Class" });
-            context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 1, Name = "Premium Class" });
-            context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 1, Name = "Economy Class" });
+            context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 2, Name = "Business Class" });
+            context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 3, Name = "Premium Class" });
+            context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 4, Name = "Economy Class" });
             context.SaveChanges();
             //base.Seed(context);
         }

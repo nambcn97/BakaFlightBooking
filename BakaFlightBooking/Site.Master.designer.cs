@@ -7,11 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BakaFlightBooking {
-    
-    
-    public partial class SiteMaster {
-        
+namespace FlightBookingWebsite
+{
+
+
+    public partial class SiteMaster
+    {
+
+        /// <summary>
+        /// CustomHead control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder CustomHead;
+
         /// <summary>
         /// MainContent control.
         /// </summary>
