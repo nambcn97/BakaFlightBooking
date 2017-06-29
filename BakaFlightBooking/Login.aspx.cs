@@ -1,26 +1,29 @@
-﻿using System;
+﻿using BakaFlightBooking.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Owin;
-using BakaFlightBooking.Models;
+using System.Web.UI.WebControls;
 
-namespace BakaFlightBooking.Account
+namespace BakaFlightBooking
 {
     public partial class Login : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["username"] != null)
+            {
+                Response.Redirect("Default.aspx");
+            }
         }
 
         protected void LogIn(object sender, EventArgs e)
         {
             if (IsValid)
             {
-                String userName = txtUsername.Text;
+                String userName = txtUserName.Text;
                 String password = txtPassword.Text;
                 using (AirlineTicketBookingDBContext db = new AirlineTicketBookingDBContext())
                 {
@@ -35,7 +38,8 @@ namespace BakaFlightBooking.Account
                     }
                     else
                     {
-                        FormsAuthentication.RedirectFromLoginPage(userName, false);
+                        Session["username"] = userName;
+                        Response.Redirect("Default.aspx");
                     }
                 }
             }

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BakaFlightBooking
+namespace FlightBookingWebsite
 {
 
 
