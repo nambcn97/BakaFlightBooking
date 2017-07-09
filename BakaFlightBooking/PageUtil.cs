@@ -1,9 +1,10 @@
-﻿using BakaFlightBooking.Models;
-using BakaFlightBooking.DAO;
+﻿using DbLibrary.Models;
+using DbLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+
 
 namespace BakaFlightBooking
 {
@@ -26,19 +27,7 @@ namespace BakaFlightBooking
 
         public static Role GetCurrentUserRole(String userName)
         {
-            var currentUser = GetCurrentUser(userName);
-            if (currentUser == null)
-            {
-                return Role.None;
-            }
-            else if (currentUser.Type == "admin")
-            {
-                return Role.Admin;
-            }
-            else
-            {
-                return Role.Agent;
-            }
+            return Role.Agent;
         }
 
         public static string GetCurrentUserFullName(String userName)
