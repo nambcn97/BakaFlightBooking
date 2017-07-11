@@ -7,11 +7,14 @@ using DbLibrary.Models;
 
 namespace DbLibrary.DAO
 {
-    public class DbInitializer : CreateDatabaseIfNotExists<AirlineTicketBookingDBContext>
+    public class DbInitializer : DropCreateDatabaseIfModelChanges<AirlineTicketBookingDBContext>
     {
         protected override void Seed(AirlineTicketBookingDBContext context)
         {
-            context.Users.Add(new User() { PassengerID = null, Username = "admin", Password = "admin" });
+            context.Users.Add(new User() { PassengerID = null, Username = "baka", Password = "baka" });
+            context.SaveChanges();
+
+            context.Admins.Add(new Admin() { username = "admin", password = "admin" });
             context.SaveChanges();
 
             context.Locations.Add(new Location() { City = "HN", State_Province = "Ha Noi", Country = "Viet Nam" });
@@ -34,7 +37,7 @@ namespace DbLibrary.DAO
             context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 3, Name = "Premium Class" });
             context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 4, Name = "Economy Class" });
             context.SaveChanges();
-            //base.Seed(context);
+            base.Seed(context);
         }
     }
 }

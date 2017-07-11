@@ -14,6 +14,7 @@ namespace DbLibrary.Models
         public AirlineTicketBookingDBContext()
             : base("Name=AirlineTicketBookingDBContext")
         {
+            Database.SetInitializer(new DbInitializer());
         }
 
         public DbSet<Admin> Admins { get; set; }
