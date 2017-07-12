@@ -212,7 +212,16 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Login.aspx" />
     <Content Include="Pages\AddLocation.aspx" />
+    <Content Include="Pages\AddAirplane.aspx" />
+    <Content Include="Pages\AddProducer.aspx" />
+    <Content Include="Pages\AddTravelClass.aspx" />
+    <Content Include="Pages\ListAirplane.aspx" />
     <Content Include="Pages\ListLocation.aspx" />
+    <Content Include="Pages\ListProducer.aspx" />
+    <Content Include="Pages\ListTravelClass.aspx" />
+    <Content Include="Pages\UpdateAirplane.aspx" />
+    <Content Include="Pages\UpdateProducer.aspx" />
+    <Content Include="Pages\UpdateTravelClass.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -401,6 +410,33 @@
     </Compile>
     <Compile Include="Pages\AddLocation.aspx.designer.cs">
       <DependentUpon>AddLocation.aspx</DependentUpon>
+    <Compile Include="Pages\AddAirplane.aspx.cs">
+      <DependentUpon>AddAirplane.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddAirplane.aspx.designer.cs">
+      <DependentUpon>AddAirplane.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddProducer.aspx.cs">
+      <DependentUpon>AddProducer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddProducer.aspx.designer.cs">
+      <DependentUpon>AddProducer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddTravelClass.aspx.cs">
+      <DependentUpon>AddTravelClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddTravelClass.aspx.designer.cs">
+      <DependentUpon>AddTravelClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListAirplane.aspx.cs">
+      <DependentUpon>ListAirplane.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ListAirplane.aspx.designer.cs">
+      <DependentUpon>ListAirplane.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ListLocation.aspx.cs">
       <DependentUpon>ListLocation.aspx</DependentUpon>
@@ -408,6 +444,41 @@
     </Compile>
     <Compile Include="Pages\ListLocation.aspx.designer.cs">
       <DependentUpon>ListLocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListProducer.aspx.cs">
+      <DependentUpon>ListProducer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ListProducer.aspx.designer.cs">
+      <DependentUpon>ListProducer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListTravelClass.aspx.cs">
+      <DependentUpon>ListTravelClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ListTravelClass.aspx.designer.cs">
+      <DependentUpon>ListTravelClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UpdateAirplane.aspx.cs">
+      <DependentUpon>UpdateAirplane.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UpdateAirplane.aspx.designer.cs">
+      <DependentUpon>UpdateAirplane.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UpdateProducer.aspx.cs">
+      <DependentUpon>UpdateProducer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UpdateProducer.aspx.designer.cs">
+      <DependentUpon>UpdateProducer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UpdateTravelClass.aspx.cs">
+      <DependentUpon>UpdateTravelClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UpdateTravelClass.aspx.designer.cs">
+      <DependentUpon>UpdateTravelClass.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
