@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/Site.master.cs" Inherits="AdminPanel.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AdminPanel.SiteMaster" %>
 
 <!DOCTYPE html>
 
@@ -11,7 +11,7 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -50,10 +50,10 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/Pages/ListLocation.aspx">List Location</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
-
                     <% 
                         if (isLogged())
                         {
@@ -84,7 +84,6 @@
                 <p>&copy; <%: DateTime.Now.Year %> - Baka Team</p>
             </footer>
         </div>
-
     </form>
 </body>
 </html>

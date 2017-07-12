@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AdminPanel.Account {
+namespace AdminPanel.Pages {
     
     
-    public partial class ManageLogins {
+    public partial class ListLocation {
         
         /// <summary>
-        /// successMessage control.
+        /// grvLocation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder successMessage;
+        protected global::System.Web.UI.WebControls.GridView grvLocation;
     }
 }

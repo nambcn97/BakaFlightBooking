@@ -1,10 +1,10 @@
-﻿using System;
+﻿using DbLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DbLibrary.Models;
 
 namespace AdminPanel.Pages
 {
@@ -14,13 +14,11 @@ namespace AdminPanel.Pages
         {
 
         }
-
         public IQueryable<Location> grdLocation_GetData()
         {
             var db = new AirlineTicketBookingDBContext();
             var query = from location in db.Locations orderby location.City ascending select location;
             return query;
         }
-       
     }
 }
