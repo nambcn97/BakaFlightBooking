@@ -220,10 +220,13 @@
     <Content Include="Pages\ListLocation.aspx" />
     <Content Include="Pages\ListAirport.aspx" />
     <Content Include="Pages\ListProducer.aspx" />
+    <Content Include="Pages\AddRoute.aspx" />
+    <Content Include="Pages\ListRoute.aspx" />
     <Content Include="Pages\ListTravelClass.aspx" />
     <Content Include="Pages\UpdateAirplane.aspx" />
     <Content Include="Pages\UpdateAirport.aspx" />
     <Content Include="Pages\UpdateProducer.aspx" />
+    <Content Include="Pages\UpdateRoute.aspx" />
     <Content Include="Pages\UpdateTravelClass.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -470,6 +473,20 @@
     <Compile Include="Pages\ListProducer.aspx.designer.cs">
       <DependentUpon>ListProducer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AddRoute.aspx.cs">
+      <DependentUpon>AddRoute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddRoute.aspx.designer.cs">
+      <DependentUpon>AddRoute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListRoute.aspx.cs">
+      <DependentUpon>ListRoute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ListRoute.aspx.designer.cs">
+      <DependentUpon>ListRoute.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ListTravelClass.aspx.cs">
       <DependentUpon>ListTravelClass.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -497,6 +514,13 @@
     </Compile>
     <Compile Include="Pages\UpdateProducer.aspx.designer.cs">
       <DependentUpon>UpdateProducer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UpdateRoute.aspx.cs">
+      <DependentUpon>UpdateRoute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UpdateRoute.aspx.designer.cs">
+      <DependentUpon>UpdateRoute.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\UpdateTravelClass.aspx.cs">
       <DependentUpon>UpdateTravelClass.aspx</DependentUpon>

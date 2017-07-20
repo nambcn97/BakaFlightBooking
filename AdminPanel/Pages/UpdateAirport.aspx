@@ -3,7 +3,7 @@
 
 <asp:Content ID="Content1" runat="server" contentplaceholderid="MainContent">
     <br />
-    <div class="fom form-group">
+    <div class="form-group">
         <asp:Label runat="server" Text="Airport_ID" />
         <asp:TextBox runat="server" ID="txtID" CssClass="form-control" Enabled="false" />
     </div>
