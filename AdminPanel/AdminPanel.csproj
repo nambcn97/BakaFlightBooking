@@ -211,12 +211,16 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Pages\AddAirplaneSeats.aspx" />
     <Content Include="Pages\AddAirport.aspx" />
+    <Content Include="Pages\AddFlight.aspx" />
     <Content Include="Pages\AddLocation.aspx" />
     <Content Include="Pages\AddAirplane.aspx" />
     <Content Include="Pages\AddProducer.aspx" />
     <Content Include="Pages\AddTravelClass.aspx" />
     <Content Include="Pages\ListAirplane.aspx" />
+    <Content Include="Pages\ListAirplaneSeats.aspx" />
+    <Content Include="Pages\ListFlight.aspx" />
     <Content Include="Pages\ListLocation.aspx" />
     <Content Include="Pages\ListAirport.aspx" />
     <Content Include="Pages\ListProducer.aspx" />
@@ -224,7 +228,9 @@
     <Content Include="Pages\ListRoute.aspx" />
     <Content Include="Pages\ListTravelClass.aspx" />
     <Content Include="Pages\UpdateAirplane.aspx" />
+    <Content Include="Pages\UpdateAirplaneSeat.aspx" />
     <Content Include="Pages\UpdateAirport.aspx" />
+    <Content Include="Pages\UpdateFlight.aspx" />
     <Content Include="Pages\UpdateProducer.aspx" />
     <Content Include="Pages\UpdateRoute.aspx" />
     <Content Include="Pages\UpdateTravelClass.aspx" />
@@ -410,12 +416,26 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Pages\AddAirplaneSeats.aspx.cs">
+      <DependentUpon>AddAirplaneSeats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddAirplaneSeats.aspx.designer.cs">
+      <DependentUpon>AddAirplaneSeats.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AddAirport.aspx.cs">
       <DependentUpon>AddAirport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\AddAirport.aspx.designer.cs">
       <DependentUpon>AddAirport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddFlight.aspx.cs">
+      <DependentUpon>AddFlight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddFlight.aspx.designer.cs">
+      <DependentUpon>AddFlight.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\AddLocation.aspx.cs">
       <DependentUpon>AddLocation.aspx</DependentUpon>
@@ -451,6 +471,20 @@
     </Compile>
     <Compile Include="Pages\ListAirplane.aspx.designer.cs">
       <DependentUpon>ListAirplane.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListAirplaneSeats.aspx.cs">
+      <DependentUpon>ListAirplaneSeats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ListAirplaneSeats.aspx.designer.cs">
+      <DependentUpon>ListAirplaneSeats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListFlight.aspx.cs">
+      <DependentUpon>ListFlight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ListFlight.aspx.designer.cs">
+      <DependentUpon>ListFlight.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ListLocation.aspx.cs">
       <DependentUpon>ListLocation.aspx</DependentUpon>
@@ -501,12 +535,26 @@
     <Compile Include="Pages\UpdateAirplane.aspx.designer.cs">
       <DependentUpon>UpdateAirplane.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\UpdateAirplaneSeat.aspx.cs">
+      <DependentUpon>UpdateAirplaneSeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UpdateAirplaneSeat.aspx.designer.cs">
+      <DependentUpon>UpdateAirplaneSeat.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\UpdateAirport.aspx.cs">
       <DependentUpon>UpdateAirport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\UpdateAirport.aspx.designer.cs">
       <DependentUpon>UpdateAirport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UpdateFlight.aspx.cs">
+      <DependentUpon>UpdateFlight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UpdateFlight.aspx.designer.cs">
+      <DependentUpon>UpdateFlight.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\UpdateProducer.aspx.cs">
       <DependentUpon>UpdateProducer.aspx</DependentUpon>
