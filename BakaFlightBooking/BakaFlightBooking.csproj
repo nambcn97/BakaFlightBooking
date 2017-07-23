@@ -184,6 +184,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Account\UserCartManaging.aspx" />
+    <Content Include="Account\UserCheckOut.aspx" />
+    <Content Include="Account\UserConfirmation.aspx" />
+    <Content Include="Account\UserFlightBooking.aspx" />
     <Content Include="Account\Lockout.aspx" />
     <Content Include="Account\Manage.aspx" />
     <Content Include="Account\ManageLogins.aspx" />
@@ -194,10 +198,13 @@
     <Content Include="Account\ResetPassword.aspx" />
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\UserPassenger.aspx" />
+    <Content Include="Account\UserYourTrip.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\textDefault.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -257,6 +264,34 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\UserCartManaging.aspx.cs">
+      <DependentUpon>UserCartManaging.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UserCartManaging.aspx.designer.cs">
+      <DependentUpon>UserCartManaging.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UserCheckOut.aspx.cs">
+      <DependentUpon>UserCheckOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UserCheckOut.aspx.designer.cs">
+      <DependentUpon>UserCheckOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UserConfirmation.aspx.cs">
+      <DependentUpon>UserConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UserConfirmation.aspx.designer.cs">
+      <DependentUpon>UserConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UserFlightBooking.aspx.cs">
+      <DependentUpon>UserFlightBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UserFlightBooking.aspx.designer.cs">
+      <DependentUpon>UserFlightBooking.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\Lockout.aspx.cs">
       <DependentUpon>Lockout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -326,6 +361,20 @@
     </Compile>
     <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
       <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UserPassenger.aspx.cs">
+      <DependentUpon>UserPassenger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UserPassenger.aspx.designer.cs">
+      <DependentUpon>UserPassenger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UserYourTrip.aspx.cs">
+      <DependentUpon>UserYourTrip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UserYourTrip.aspx.designer.cs">
+      <DependentUpon>UserYourTrip.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>

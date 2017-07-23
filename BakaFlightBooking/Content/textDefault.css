@@ -1,0 +1,56 @@
+﻿.fancy {
+    font-family: fantasy;
+}
+
+.auto-style2 {
+    position: relative;
+    min-height: 1px;
+    width: 100%;
+    left: 1px;
+    top: -16px;
+    height: 190px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.auto-style5 {
+    height: 40px;
+    width: 250px;
+}
+
+.auto-style6 {
+    height: 40px;
+    width: 80px;
+    padding-right: 15px;
+    text-align: right;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1500px;
+    width: 90%;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 13000px;
+    }
+}
+
+.auto-style7 {
+    left: 1px;
+    top: -16px;
+    height: 127px;
+}

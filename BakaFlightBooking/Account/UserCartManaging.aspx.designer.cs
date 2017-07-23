@@ -7,63 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FlightBookingWebsite {
+namespace BakaFlightBooking.Account {
     
     
-    public partial class _Default {
+    public partial class Lockout {
         
         /// <summary>
-        /// drpOrigin_Airport control.
+        /// txtFlyingFrom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpOrigin_Airport;
+        protected global::System.Web.UI.WebControls.TextBox txtFlyingFrom;
         
         /// <summary>
-        /// drpDestination_Airport control.
+        /// txtFlyingTo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpDestination_Airport;
+        protected global::System.Web.UI.WebControls.TextBox txtFlyingTo;
         
         /// <summary>
-        /// TextBox1 control.
+        /// drpDateFlight control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.DropDownList drpDateFlight;
         
         /// <summary>
-        /// TextBox2 control.
+        /// drpSearchFlights control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.DropDownList drpSearchFlights;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-        
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

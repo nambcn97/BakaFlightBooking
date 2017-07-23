@@ -68,30 +68,31 @@
                             {
                         %>
                         <!--Có thanh search để search các chuyến bay, List of Flights-->
-                        <li><a runat="server" href="~/Account/FlightBooking.aspx">Book A Flight</a></li>
-                        <!--Giỏ hàng-->
-                        <li><a runat="server" href="~/Account/CartManaging.aspx">My Cart</a></li>
+                        <li><a runat="server" href="~/Account/UserFlightBooking.aspx">Book A Flight</a></li>
+                        <!--Search info của chuyến bay đã đặt-->
+                        <li><a runat="server" href="~/Account/UserYourTrip.aspx">Find My Trip</a></li>
                         <%
                             }
                         %>
                     </ul>
 
                     <%
-                        if (!isLogged()) { 
+                        if (!isLogged())
+                        {
                     %>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a runat="server" href="~/Account/Register">Register</a></li>
-                            <li><a runat="server" href="Login">Log in</a></li>
-                        </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a runat="server" href="~/Account/Register">Register</a></li>
+                        <li><a runat="server" href="Login">Log in</a></li>
+                    </ul>
                     <%
-                        }     
-                        else {
+                        }
+                        else
+                        {
                     %>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: GetCurrentUserFullName() + " !"  %>!</a></li>
-                            <li>
-                            </li>
-                        </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: GetCurrentUserFullName() + " !"  %>!</a></li>
+                        <li></li>
+                    </ul>
                     <%
                         }
                     %>
@@ -101,8 +102,10 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
+            
             <footer>
+                <br />
+                <hr />
                 <p>&copy; <%: DateTime.Now.Year %> - Baka Team</p>
             </footer>
         </div>
