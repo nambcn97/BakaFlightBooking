@@ -2,11 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-group">
         <asp:Label runat="server" Text="Departure DateTime" />
-        <asp:TextBox runat="server" ID="txtDeparture_DateTime" CssClass="form-control" />
+        <asp:TextBox type="text" runat="server" ID="txtDeparture_DateTime" CssClass="form-control" />
     </div>
     <div class="form-group">
         <asp:Label runat="server" Text="Arrival DateTime" />
-        <asp:TextBox runat="server" ID="txtArrival_DateTime" CssClass="form-control" />
+        <asp:TextBox type="text" runat="server" ID="txtArrival_DateTime" CssClass="form-control" />
     </div>
     <div class="form-group">
         <asp:Label runat="server" Text="Route ID" />
