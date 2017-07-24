@@ -52,7 +52,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="#"><%= userName %></a></li>
+                        <li></li>
                         <%
                             var role = GetCurrentUserRole();
                             if (role == BakaFlightBooking.Role.Admin)
@@ -68,13 +68,14 @@
                             {
                         %>
                         <!--Có thanh search để search các chuyến bay, List of Flights-->
-                        <li><a runat="server" href="~/Account/FlightBooking.aspx">Book A Flight</a></li>
+                        <li><a runat="server" href="~/Pages/SearchFlight.aspx">Book A Flight</a></li>
                         <!--Giỏ hàng-->
                         <%
                             if (isLogged())
                             {
                         %>
-                        <li><a runat="server" href="~/Account/AddFund.aspx">AddFund</a></li>
+                        <li><a runat="server" href="~/Pages/AddFund.aspx">Add Fund</a></li>
+                        <li><a runat="server" href="~/Pages/MyBooking.aspx">My Booking</a></li>
                         <%
                             }
                              %>
@@ -95,9 +96,8 @@
                         else {
                     %>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: GetCurrentUserFullName() + " !"  %>!</a></li>
-                            <li>
-                            </li>
+                            <li><a runat="server" href="" title="Manage your account">Hello, <%: GetCurrentUserFullName() + " !"  %>!</a></li>
+                            <li><a runat="server" href="~/Pages/LogOut.aspx" title="log out">Log Out</a></li>
                         </ul>
                     <%
                         }

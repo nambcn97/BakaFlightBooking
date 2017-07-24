@@ -33,7 +33,9 @@ namespace BakaFlightBooking.Pages
                 txtArrivalFlyingTo.Text = from;
 
                 f1 = ListFlightDepart(departTime, from, to);
-                f2 = ListFlightDepart(arrivalTime, to, from);
+                f2 = ListFlightArrival(arrivalTime, to, from);
+                f1.AddRange(ListFlightArrival(departTime, to, from));
+                f2.AddRange(ListFlightDepart(arrivalTime, from, to));
 
                 DataTable dt = new DataTable();
                 dt.Columns.Add("FlightID");

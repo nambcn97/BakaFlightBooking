@@ -26,8 +26,27 @@ namespace BakaFlightBooking.Pages
                     txtDepartFlyingTo.Text = ap2.Airport_Name + "-" + ap2.Location.City;
                     txtDepartTime.Text = fl.Departure_DateTime.ToString();
                     txtArrivalTime.Text = fl.Arrival_DateTime.ToString();
+                    
+                    //select all booking
+                    var query = from d in db.Bookings select d;
+                    List<Booking> bk = query.ToList();
+                    List<int> tks = new List<int>();
+                    for (int i=0; i<bk.Count; i++)
+                    {
+                        tks.Add((int)bk[i].Ticket_ID);
+                    }
+                    // select all ticket which is not contained in any booking
+                    var query1 = from d in db.Tickets where d.Flight_No == fl.Flight_No && !tks.Contains(d.Ticket_ID) select new { id = d.Ticket_ID, txt = d.Seat_No + "-" + d.Price };
+                    DropSeat.DataSource = query1.ToList();
+                    DropSeat.DataBind();
                 }
             }
+        }
+
+        protected void Choose_Click(object sender, EventArgs e)
+        {
+            Session["ticket_id"] = DropSeat.SelectedValue;
+            Response.Redirect("~/Pages/Passengers.aspx");
         }
     }
 }

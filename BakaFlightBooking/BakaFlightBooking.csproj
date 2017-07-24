@@ -200,6 +200,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\textDefault.css" />
+    <Content Include="ErrorPages\UserLoginRemainder.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -210,7 +211,11 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Pages\AddFund.aspx" />
     <Content Include="Pages\ChooseSeat.aspx" />
+    <Content Include="Pages\Confirmation.aspx" />
+    <Content Include="Pages\LogOut.aspx" />
+    <Content Include="Pages\Passengers.aspx" />
     <Content Include="Pages\SearchFlight.aspx" />
     <Content Include="Pages\SearchFlightResult.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -363,6 +368,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ErrorPages\UserLoginRemainder.aspx.cs">
+      <DependentUpon>UserLoginRemainder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPages\UserLoginRemainder.aspx.designer.cs">
+      <DependentUpon>UserLoginRemainder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -374,12 +386,40 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model\IdentityModels.cs" />
+    <Compile Include="Pages\AddFund.aspx.cs">
+      <DependentUpon>AddFund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddFund.aspx.designer.cs">
+      <DependentUpon>AddFund.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ChooseSeat.aspx.cs">
       <DependentUpon>ChooseSeat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\ChooseSeat.aspx.designer.cs">
       <DependentUpon>ChooseSeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Confirmation.aspx.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Confirmation.aspx.designer.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Passengers.aspx.cs">
+      <DependentUpon>Passengers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Passengers.aspx.designer.cs">
+      <DependentUpon>Passengers.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SearchFlight.aspx.cs">
       <DependentUpon>SearchFlight.aspx</DependentUpon>

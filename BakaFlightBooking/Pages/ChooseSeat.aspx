@@ -39,11 +39,11 @@
             <!-- Đây là cái navigator -->
             <div style="text-align: left" class="col-sm-2">
                 <div class="list-group">
-                    <asp:HyperLink CssClass="list-group-item" runat="server" NavigateUrl="~/Account/UserSearch.aspx">Search Flight</asp:HyperLink>
-                    <asp:HyperLink CssClass="list-group-item" runat="server" NavigateUrl="~/Account/UserFlightBooking.aspx">Choose Your Flight</asp:HyperLink>
-                    <asp:HyperLink BackColor="Aquamarine" CssClass="list-group-item" runat="server" NavigateUrl="~/Account/UserChoosingSeat.aspx">Book A Seat</asp:HyperLink>
-                    <asp:HyperLink CssClass="list-group-item " runat="server" NavigateUrl="~/Account/UserPassenger.aspx">Passenger</asp:HyperLink>
-                    <asp:HyperLink CssClass="list-group-item" runat="server" NavigateUrl="~/Account/UserCheckOut.aspx">Payment</asp:HyperLink>
+                    <asp:HyperLink CssClass="list-group-item" runat="server">Search Flight</asp:HyperLink>
+                    <asp:HyperLink CssClass="list-group-item" runat="server">Choose Your Flight</asp:HyperLink>
+                    <asp:HyperLink BackColor="Aquamarine" CssClass="list-group-item" runat="server">Book A Seat</asp:HyperLink>
+                    <asp:HyperLink CssClass="list-group-item " runat="server">Passenger</asp:HyperLink>
+                    <asp:HyperLink CssClass="list-group-item" runat="server">Payment</asp:HyperLink>
                 </div>
             </div>
 
@@ -90,8 +90,8 @@
                     <br />
                     <%--DropdownList gồm những ghế chưa có chỗ ngồi của máy bay được chọn --%>
                       <div>
-                    Please choose the available seat now:
-                    <asp:DropDownList runat="server" CssClass="w3-select" Style="width: 200px"></asp:DropDownList>
+                    Please choose the available seat now:(SeatNumber - Price)
+                    <asp:DropDownList ID="DropSeat" runat="server" DataTextField="txt" DataValueField="id" CssClass="w3-select" Style="width: 200px"></asp:DropDownList><asp:Button ID="Choose" runat="server" Text="Choose" OnClick="Choose_Click" />
                 </div>
                 </div>
                 <br />

@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using BakaFlightBooking;
+using DbLibrary.Models;
 
 namespace FlightBookingWebsite
 {
@@ -31,6 +32,15 @@ namespace FlightBookingWebsite
         protected bool isLogged()
         {
             return Session["username"] != null;
+        }
+
+        protected double getBlance()
+        {
+            using (var db = new AirlineTicketBookingDBContext())
+            {
+                User user = db.Users.Find(Session["username"]);
+                return (double) user.Wallet;
+            }
         }
     }
 
