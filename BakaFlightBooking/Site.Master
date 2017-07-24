@@ -70,7 +70,14 @@
                         <!--Có thanh search để search các chuyến bay, List of Flights-->
                         <li><a runat="server" href="~/Account/FlightBooking.aspx">Book A Flight</a></li>
                         <!--Giỏ hàng-->
-                        <li><a runat="server" href="~/Account/CartManaging.aspx">My Cart</a></li>
+                        <%
+                            if (isLogged())
+                            {
+                        %>
+                        <li><a runat="server" href="~/Account/AddFund.aspx">AddFund</a></li>
+                        <%
+                            }
+                             %>
                         <%
                             }
                         %>

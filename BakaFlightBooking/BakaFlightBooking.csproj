@@ -199,6 +199,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\textDefault.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -209,6 +210,8 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Pages\ChooseSeat.aspx" />
+    <Content Include="Pages\SearchFlight.aspx" />
     <Content Include="Pages\SearchFlightResult.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -371,6 +374,20 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model\IdentityModels.cs" />
+    <Compile Include="Pages\ChooseSeat.aspx.cs">
+      <DependentUpon>ChooseSeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ChooseSeat.aspx.designer.cs">
+      <DependentUpon>ChooseSeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchFlight.aspx.cs">
+      <DependentUpon>SearchFlight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SearchFlight.aspx.designer.cs">
+      <DependentUpon>SearchFlight.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SearchFlightResult.aspx.cs">
       <DependentUpon>SearchFlightResult.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

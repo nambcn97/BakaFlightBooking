@@ -10,96 +10,78 @@
 namespace BakaFlightBooking.Pages {
     
     
-    public partial class SearchFlightResult {
+    public partial class SearchFlight {
         
         /// <summary>
-        /// txtDepartFlyingFrom control.
+        /// drpOrigin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDepartFlyingFrom;
+        protected global::System.Web.UI.WebControls.DropDownList drpOrigin;
         
         /// <summary>
-        /// txtDepartFlyingTo control.
+        /// drpDestination control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDepartFlyingTo;
+        protected global::System.Web.UI.WebControls.DropDownList drpDestination;
         
         /// <summary>
-        /// DepartGridView control.
+        /// CustomValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView DepartGridView;
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
         
         /// <summary>
-        /// DepartDropList control.
+        /// txtDepart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DepartDropList;
+        protected global::System.Web.UI.WebControls.TextBox txtDepart;
         
         /// <summary>
-        /// BuyDepart control.
+        /// CustomValidator2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BuyDepart;
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator2;
         
         /// <summary>
-        /// txtArrivalFlyingFrom control.
+        /// txtArrival control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtArrivalFlyingFrom;
+        protected global::System.Web.UI.WebControls.TextBox txtArrival;
         
         /// <summary>
-        /// txtArrivalFlyingTo control.
+        /// DropDownList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtArrivalFlyingTo;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
-        /// ArrivalGridView control.
+        /// btnFind control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ArrivalGridView;
-        
-        /// <summary>
-        /// ArrivalDropList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ArrivalDropList;
-        
-        /// <summary>
-        /// BuyArrival control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BuyArrival;
+        protected global::System.Web.UI.WebControls.Button btnFind;
     }
 }

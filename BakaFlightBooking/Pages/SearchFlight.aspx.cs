@@ -6,9 +6,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace FlightBookingWebsite
+namespace BakaFlightBooking.Pages
 {
-    public partial class _Default : Page
+    public partial class SearchFlight : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -44,23 +44,23 @@ namespace FlightBookingWebsite
                 Session["origin"] = drpOrigin.SelectedValue;
                 Session["destination"] = drpDestination.SelectedValue;
                 Session["depart"] = txtDepart.Text;
-                Session["arrival"] = txtArrival.Text; 
+                Session["arrival"] = txtArrival.Text;
                 Response.Redirect("~/Pages/SearchFlightResult.aspx");
             }
         }
 
         protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
         {
-           
+
             String depart = txtDepart.Text;
             if (depart.Length == 0)
             {
                 args.IsValid = true;
                 return;
             }
-            for (int i=0; i<depart.Length; i++)
+            for (int i = 0; i < depart.Length; i++)
             {
-                if(depart[i] == 'd' || depart[i] == 'm' || depart[i] == 'y')
+                if (depart[i] == 'd' || depart[i] == 'm' || depart[i] == 'y')
                 {
                     args.IsValid = false;
                     return;
