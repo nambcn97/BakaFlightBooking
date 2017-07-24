@@ -47,8 +47,9 @@
                     <asp:TableRow>
                         <asp:TableCell Style="text-align: left" CssClass="auto-style7">Date flight
                         </asp:TableCell>
+                        <%--Ngày default được truyền data từ txtDepart ở thanh search --%>
                         <asp:TableCell>
-                            <asp:DropDownList CssClass="form-control" ID="drpDepartDateFlight" runat="server" Height="40px" Width="300px">
+                            <asp:DropDownList CssClass="form-control" ID="drpDepartDateFlight" runat="server" Height="40px" Width="300px"> 
                             </asp:DropDownList>
                         </asp:TableCell>
                     </asp:TableRow>
@@ -57,6 +58,7 @@
                         <asp:TableCell Style="text-align: left" CssClass="auto-style7">Sort by
                         </asp:TableCell>
                         <asp:TableCell>
+                            <%--Sort theo Price hoặc Time --%>
                             <asp:DropDownList CssClass="form-control" ID="drpDepartSearchFlights" runat="server" Height="40px" Width="300px">
                                 <asp:ListItem Selected="True">All</asp:ListItem>
                                 <asp:ListItem>Lowest Price</asp:ListItem>

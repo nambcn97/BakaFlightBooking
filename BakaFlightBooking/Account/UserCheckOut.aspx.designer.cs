@@ -67,6 +67,24 @@ namespace BakaFlightBooking.Account {
         protected global::System.Web.UI.WebControls.TextBox TextBox5;
         
         /// <summary>
+        /// CheckBoxRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CheckBoxRequired;
+        
+        /// <summary>
+        /// ckbCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox ckbCheck;
+        
+        /// <summary>
         /// TextBox6 control.
         /// </summary>
         /// <remarks>

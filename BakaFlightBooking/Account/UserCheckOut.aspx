@@ -32,6 +32,11 @@
             margin: 0 auto 10px auto;
         }
     </style>
+    <script type="text/javascript">
+        function CheckBoxRequired_ClientValidate(sender, e) {
+            e.IsValid = jQuery(".AcceptedAgreement input:checkbox").is(':checked');
+        }
+    </script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -47,14 +52,14 @@
                     <asp:HyperLink CssClass="list-group-item " runat="server" NavigateUrl="~/Account/UserPassenger.aspx">Passenger</asp:HyperLink>
                     <asp:HyperLink CssClass="list-group-item" runat="server" NavigateUrl="~/Account/UserChoosingSeat.aspx">Book A Seat</asp:HyperLink>
                     <asp:HyperLink BackColor="Aquamarine" CssClass="list-group-item" runat="server" NavigateUrl="~/Account/UserCheckOut.aspx">Payment</asp:HyperLink>
-                     <asp:HyperLink CssClass="list-group-item" runat="server" NavigateUrl="~/Account/UserConfirmation.aspx">Confirmation</asp:HyperLink>
+                    <asp:HyperLink CssClass="list-group-item" runat="server" NavigateUrl="~/Account/UserConfirmation.aspx">Confirmation</asp:HyperLink>
                 </div>
             </div>
 
 
             <!-- Đây là phần nội dung của trang -->
             <div class="col-sm-10">
-                 <h1 class="fancy">Payment</h1>
+                <h1 class="fancy">Payment</h1>
                 <h2>Departure Flight Payment</h2>
                 <div class="cangiua">
                     <!--Hiện thông tin từ search, txtFlyingFrom sẽ truyền dữ liệu từ drpOrigin_Airport, txtFlyingTo sẽ truyền dữ liệu từ drpDestination_Airport-->
@@ -70,7 +75,6 @@
                             <td class="auto-style10">
                                 <asp:TextBox ID="TextBox1" runat="server" CssClass="w3-input" Width="140px" ReadOnly="true"></asp:TextBox>
                             </td>
-
                         </tr>
                         <tr>
                             <td></td>
@@ -83,7 +87,7 @@
                     <br />
                 </div>
                 <br />
-            
+
                 <h2>Arrival Flight Payment</h2>
                 <div class="cangiua">
                     <!--Hiện thông tin từ search, txtFlyingFrom sẽ truyền dữ liệu từ drpOrigin_Airport, txtFlyingTo sẽ truyền dữ liệu từ drpDestination_Airport-->
@@ -99,7 +103,6 @@
                             <td class="auto-style10">
                                 <asp:TextBox ID="TextBox4" runat="server" CssClass="w3-input" Width="140px" ReadOnly="true"></asp:TextBox>
                             </td>
-
                         </tr>
                         <tr>
                             <td></td>
@@ -112,18 +115,22 @@
                     <br />
                 </div>
                 <table class="navbar-right">
-                  
                     <tr>
-                         <td style="vertical-align:central">
-                            <asp:CheckBox runat="server" Text="Check this box if you indicate that you really want to buy this." Font-Size="Large" Height="40px" /></td>
-                          <td style="width: 40px"></td>
+                        <%--Validate Check box, check box phải được check thì mới làm việc. --%>
+                        <asp:CustomValidator runat="server" ID="CheckBoxRequired" EnableClientScript="true"
+                            OnServerValidate="CheckBoxRequired_ServerValidate"
+                            ClientValidationFunction="CheckBoxRequired_ClientValidate">You must select this box to proceed.</asp:CustomValidator>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: central">
+                            <asp:CheckBox  CssClass="bg-danger" ID="ckbCheck" runat="server" Text="Check this box if you indicate that you really want to buy this." Font-Size="Large" Height="40px" /></td>
+                        <td style="width: 40px"></td>
                         <td style="padding-right: 15px">Total</td>
                         <td>
                             <asp:TextBox ID="TextBox6" runat="server" CssClass="form-control" Height="40px" Width="100px" ReadOnly="true"></asp:TextBox></td>
                         <td style="width: 40px"></td>
                         <td>
-                            <asp:Button CssClass="btn btn-danger navbar-form  form-control" ID="btnContinue" runat="server" Text="Continue" Height="40px" Width="150px" PostBackUrl="~/Account/UserConfirmation.aspx" /></td>
-                        
+                            <asp:Button CssClass="btn btn-danger navbar-form  form-control" ID="btnContinue" runat="server" Text="Continue" Height="40px" Width="150px" PostBackUrl="~/Account/UserConfirmation.aspx" OnClick="btnContinue_Click" /></td>
                     </tr>
 
                 </table>

@@ -49,40 +49,62 @@
 
         <div class="auto-style13" runat="server">
             <asp:Table BorderWidth="0" Style="border: none;" runat="server">
-                
-               <asp:TableRow>
-                   <asp:TableCell CssClass="auto-style8">
+                <%--
+                <asp:TableRow>
+                    <asp:TableCell CssClass="auto-style8">
            
                     </asp:TableCell>
-                   <asp:TableCell CssClass="auto-style9">
-                      <asp:RadioButton ID="RadioButton1" runat="server"  GroupName="rdKindOfFlight" Text="One Way" Height="40px" Width="180px" BorderStyle="None" />
+                    <asp:TableCell CssClass="auto-style9">
+                        <asp:RadioButton ID="RadioButton1" runat="server" GroupName="rdKindOfFlight" Text="One Way" Height="40px" Width="180px" BorderStyle="None" ControlToValidate="rdKindOfFlight" />
                     </asp:TableCell>
-                   <asp:TableCell CssClass="auto-style8">
+                    <asp:TableCell CssClass="auto-style8">
 
                     </asp:TableCell>
-                   <asp:TableCell CssClass="auto-style9">
-                       <asp:RadioButton ID="RadioButton2" runat="server"  GroupName="rdKindOfFlight" Text="Round Trip" Height="40px" Width="180px" BorderStyle="None" />
-                    </asp:TableCell>  
-                   <asp:TableCell CssClass="auto-style8">
+                    <asp:TableCell CssClass="auto-style9">
+                        <asp:RadioButton ID="RadioButton2" runat="server" GroupName="rdKindOfFlight" Text="Round Trip" Height="40px" Width="180px" BorderStyle="None" />
+                    </asp:TableCell>
+                    <asp:TableCell CssClass="auto-style8">
             
                     </asp:TableCell>
-                   <asp:TableCell CssClass="auto-style9">
-                          <asp:RadioButton ID="rdEconomicClass" runat="server"  GroupName="rdClass" Text="Economic Class" Height="40px" Width="180px" BorderStyle="None" />
+                    <asp:TableCell CssClass="auto-style9">
+                        <asp:RadioButton ID="rdEconomicClass" runat="server" GroupName="rdClass" Text="Economic Class" Height="40px" Width="180px" BorderStyle="None" />
                     </asp:TableCell>
-                   <asp:TableCell CssClass="auto-style8">
+                    <asp:TableCell CssClass="auto-style8">
                        
                     </asp:TableCell>
-                   <asp:TableCell CssClass="auto-style9">
-                        <asp:RadioButton ID="rdBusinessClass" runat="server"  GroupName="rdClass" Text=" Business Class" Height="40px" Width="180px"/> 
+                    <asp:TableCell CssClass="auto-style9">
+                        <asp:RadioButton ID="rdBusinessClass" runat="server" GroupName="rdClass" Text=" Business Class" Height="40px" Width="180px" />
                     </asp:TableCell>
-               </asp:TableRow>
-                
-                <asp:TableRow>
+                </asp:TableRow>
+                --%>
 
+                <%--Hàng Validate --%>
+                <asp:TableRow>
+                    <asp:TableCell>
+                    </asp:TableCell>
+                    <asp:TableCell>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ID="validateFrom" runat="server" ErrorMessage="This fill is required!" ControlToValidate="drpDestination_Airport"></asp:RequiredFieldValidator><br />
+                    </asp:TableCell>
+                    <asp:TableCell>
+                    </asp:TableCell>
+                    <asp:TableCell>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ID="validateTo" runat="server" ErrorMessage="This fill is required!" ControlToValidate="drpOrigin_Airport"></asp:RequiredFieldValidator><br />
+                    </asp:TableCell>
+                    <asp:TableCell></asp:TableCell>
+                    <asp:TableCell>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ID="validateDepart" runat="server" ErrorMessage="This fill is required!" ControlToValidate="txtDepart"></asp:RequiredFieldValidator><br />
+                    </asp:TableCell>
+                    <asp:TableCell></asp:TableCell>
+                    <asp:TableCell>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ID="validateArrival" runat="server" ErrorMessage="This fill is required!" ControlToValidate="txtArrival"></asp:RequiredFieldValidator><br />
+                    </asp:TableCell>
+                </asp:TableRow>
+
+                <%--Hàng Search--%>
+                <asp:TableFooterRow>
                     <asp:TableCell CssClass="auto-style10">
-                        <asp:Label runat="server" CssClass="control-label">
-                    From
-                        </asp:Label></asp:TableCell>
+                        <asp:Label runat="server" CssClass="control-label">From</asp:Label>
+                    </asp:TableCell>
                     <asp:TableCell CssClass="auto-style11">
                         <asp:DropDownList CssClass="form-control" ID="drpOrigin_Airport" AutoPostBack="true" runat="server" Height="40px" Width="200px"></asp:DropDownList>
                     </asp:TableCell>
@@ -96,37 +118,28 @@
                     </asp:TableCell>
                     <asp:TableCell CssClass="auto-style11">
 
-                        <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" Height="40px" Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="txtDepart" CssClass="form-control" runat="server" Height="40px" Width="200px"></asp:TextBox>
 
                     </asp:TableCell>
                     <asp:TableCell CssClass="auto-style10">Arrival
                     </asp:TableCell>
                     <asp:TableCell CssClass="auto-style11">
 
-                        <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" Height="40px" Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="txtArrival" CssClass="form-control" runat="server" Height="40px" Width="200px"></asp:TextBox>
 
                     </asp:TableCell>
                     <asp:TableCell CssClass="auto-style12">
-
                         <asp:Button CssClass="btn btn-danger navbar-form navbar-right form-control" ID="btnSearchFlight" runat="server" Text="Find Flight" Height="40px" Width="150px" OnClick="btnSearchFlight_Click" />
-
                     </asp:TableCell>
-
-                </asp:TableRow>
-
-
+                </asp:TableFooterRow>
             </asp:Table>
 
         </div>
 
-        <br />
-
-
-
+        <%--Thanh bar show ảnh banner--%>
         <div class="row">
             <div class="col-sm-12">
                 <div id="main-carousel" class="carousel slide" data-ride="carousel">
-
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                         <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
@@ -134,9 +147,7 @@
                         <li data-target="#main-carousel" data-slide-to="2"></li>
                     </ol>
                     <!-- Wrapper for slides -->
-
                     <div>
-
                         <!-- Place where put image of banner -->
                         <div class="col-md-12">
                             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -172,10 +183,7 @@
                                 <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"></a>
                             </div>
                         </div>
-
                     </div>
-
-
                     <!-- Controls -->
                     <a class="left carousel-control" href="#main-carousel" role="button" data-slide="prev">
                         <span class="sr-only">Previous</span>
@@ -184,10 +192,8 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-
                 <br />
                 <br />
-
             </div>
         </div>
     </div>

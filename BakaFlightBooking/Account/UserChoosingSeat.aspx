@@ -93,6 +93,7 @@
                         </tr>
                     </table>
                     <br />
+                    <%--DropdownList gồm những ghế chưa có chỗ ngồi của máy bay được chọn --%>
                       <div>
                     Please choose the available seat now:
                     <asp:DropDownList runat="server" CssClass="w3-select" Style="width: 200px"></asp:DropDownList>
@@ -143,6 +144,7 @@
 
                 </div>
                 <br />
+                   <%--DropdownList gồm những ghế chưa có chỗ ngồi của máy bay được chọn --%>
                 <div>
                     Please choose the available seat now:
                     <asp:DropDownList runat="server" CssClass="w3-select" Style="width: 200px"></asp:DropDownList>

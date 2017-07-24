@@ -20,6 +20,7 @@
             height: 45px;
         }
     </style>
+
 </asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -50,6 +51,7 @@
     </div>
         <div class="panel-group">
             <div class="panel panel-info" style="width: 90%">
+                <%--Điền thông tin cá nhân--%>
                 <div style="text-align: left" class="panel-heading">
                     Personal Information
                 </div>
@@ -77,6 +79,7 @@
 
                     <div style="text-align: left">
                     </div>
+                    <%--Ngày tháng năm sinh từ Drop down default được xử lí ở aspx.cs, Default là 1/1/2017--%>
                     <div class="form-group row">
                         <div class="col-xs-3">
                             <label>Month</label>
@@ -131,9 +134,7 @@
                         </div>
                     </div>
                 </div>
-
                 <asp:Button CssClass="btn btn-info navbar-form navbar-right form-control" ID="btnContinue" runat="server" Text="Continue" Height="40px" Width="150px" OnClick="btnContinue_Click" />
-
             </div>
         </div>
 

@@ -200,7 +200,6 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\UserPassenger.aspx" />
     <Content Include="Account\UserSearch.aspx" />
-    <Content Include="Account\UserYourTrip.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -376,13 +375,6 @@
     </Compile>
     <Compile Include="Account\UserSearch.aspx.designer.cs">
       <DependentUpon>UserSearch.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\UserYourTrip.aspx.cs">
-      <DependentUpon>UserYourTrip.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\UserYourTrip.aspx.designer.cs">
-      <DependentUpon>UserYourTrip.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>

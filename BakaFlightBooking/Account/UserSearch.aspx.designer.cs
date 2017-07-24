@@ -13,40 +13,40 @@ namespace BakaFlightBooking.Account {
     public partial class UserSearch {
         
         /// <summary>
-        /// RadioButton1 control.
+        /// validateFrom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validateFrom;
         
         /// <summary>
-        /// RadioButton2 control.
+        /// validateTo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validateTo;
         
         /// <summary>
-        /// rdEconomicClass control.
+        /// validateDepart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdEconomicClass;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validateDepart;
         
         /// <summary>
-        /// rdBusinessClass control.
+        /// validateArrival control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdBusinessClass;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validateArrival;
         
         /// <summary>
         /// drpOrigin_Airport control.
@@ -67,22 +67,22 @@ namespace BakaFlightBooking.Account {
         protected global::System.Web.UI.WebControls.DropDownList drpDestination_Airport;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtDepart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtDepart;
         
         /// <summary>
-        /// TextBox2 control.
+        /// txtArrival control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtArrival;
         
         /// <summary>
         /// btnSearchFlight control.

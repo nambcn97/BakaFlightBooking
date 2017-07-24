@@ -27,7 +27,6 @@ namespace BakaFlightBooking.Account
 
             drpDay.DataSource = GetDays();
             drpDay.DataBind();
-
         }
         public List<int> GetYears()
         {
