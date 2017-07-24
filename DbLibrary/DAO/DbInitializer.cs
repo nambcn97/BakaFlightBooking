@@ -7,7 +7,7 @@ using DbLibrary.Models;
 
 namespace DbLibrary.DAO
 {
-    public class DbInitializer : CreateDatabaseIfNotExists<AirlineTicketBookingDBContext>
+    public class DbInitializer : DropCreateDatabaseAlways<AirlineTicketBookingDBContext>
     {
         protected override void Seed(AirlineTicketBookingDBContext context)
         {
@@ -22,9 +22,9 @@ namespace DbLibrary.DAO
             context.Locations.Add(new Location() { City = "DN", State_Province = "Da Nang", Country = "Viet Nam" });
             context.SaveChanges();
 
-            context.Airports.Add(new Airport() { Airport_ID = 1, Airport_Name = "San bay quoc te Noi Bai", Location_City = "HN" });
-            context.Airports.Add(new Airport() { Airport_ID = 2, Airport_Name = "San bay quoc te Tan Son Nhat", Location_City = "HCM" });
-            context.Airports.Add(new Airport() { Airport_ID = 3, Airport_Name = "San bay quoc te Da Nang", Location_City = "DN" });
+            context.Airports.Add(new Airport() {  Airport_Name = "San bay quoc te Noi Bai", Location_City = "HN" });
+            context.Airports.Add(new Airport() {  Airport_Name = "San bay quoc te Tan Son Nhat", Location_City = "HCM" });
+            context.Airports.Add(new Airport() {  Airport_Name = "San bay quoc te Da Nang", Location_City = "DN" });
             context.SaveChanges();
 
             context.Producers.Add(new Producer() { Producer_ID = "vn_airline", Producer_Name = "Viet Nam Airline", Description = "Hang hang khong Viet Nam Airline" });
@@ -32,15 +32,15 @@ namespace DbLibrary.DAO
             context.Producers.Add(new Producer() { Producer_ID = "vietjet", Producer_Name = "Vietjet Air", Description = "Cong ty co phan hang khong VietJet" });
             context.SaveChanges();
 
-            context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 1, Name = "First Class" });
-            context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 2, Name = "Business Class" });
-            context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 3, Name = "Premium Class" });
-            context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 4, Name = "Economy Class" });
+            context.TravelClasses.Add(new TravelClass() {  Name = "First Class" });
+            context.TravelClasses.Add(new TravelClass() {  Name = "Business Class" });
+            context.TravelClasses.Add(new TravelClass() {  Name = "Premium Class" });
+            context.TravelClasses.Add(new TravelClass() {  Name = "Economy Class" });
             context.SaveChanges();
 
-            context.Routes.Add(new Route() { Route_ID = 1, Origin_Airport = 1, Destination_Airport = 2, Distance = 150 });
-            context.Routes.Add(new Route() { Route_ID = 2, Origin_Airport = 1, Destination_Airport = 3, Distance = 250 });
-            context.Routes.Add(new Route() { Route_ID = 3, Origin_Airport = 2, Destination_Airport = 3, Distance = 350 });
+            context.Routes.Add(new Route() {  Origin_Airport = 1, Destination_Airport = 2, Distance = 150 });
+            context.Routes.Add(new Route() { Origin_Airport = 1, Destination_Airport = 3, Distance = 250 });
+            context.Routes.Add(new Route() { Origin_Airport = 2, Destination_Airport = 3, Distance = 350 });
             context.SaveChanges();
 
             base.Seed(context);

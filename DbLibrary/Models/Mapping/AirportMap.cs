@@ -12,7 +12,7 @@ namespace DbLibrary.Models.Mapping
 
             // Properties
             this.Property(t => t.Airport_ID)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             this.Property(t => t.Airport_Name)
                 .HasMaxLength(50);

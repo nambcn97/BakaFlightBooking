@@ -12,7 +12,7 @@ namespace DbLibrary.Models.Mapping
 
             // Properties
             this.Property(t => t.Route_ID)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             // Table & Column Mappings
             this.ToTable("Route");

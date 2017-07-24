@@ -220,6 +220,7 @@
     <Content Include="Pages\AddTravelClass.aspx" />
     <Content Include="Pages\ListAirplane.aspx" />
     <Content Include="Pages\ListAirplaneSeats.aspx" />
+    <Content Include="Pages\ListPassenger.aspx" />
     <Content Include="Pages\ListFlight.aspx" />
     <Content Include="Pages\ListLocation.aspx" />
     <Content Include="Pages\ListAirport.aspx" />
@@ -478,6 +479,13 @@
     </Compile>
     <Compile Include="Pages\ListAirplaneSeats.aspx.designer.cs">
       <DependentUpon>ListAirplaneSeats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListPassenger.aspx.cs">
+      <DependentUpon>ListPassenger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ListPassenger.aspx.designer.cs">
+      <DependentUpon>ListPassenger.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ListFlight.aspx.cs">
       <DependentUpon>ListFlight.aspx</DependentUpon>
