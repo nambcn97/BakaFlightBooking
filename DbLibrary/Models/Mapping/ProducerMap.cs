@@ -13,8 +13,7 @@ namespace DbLibrary.Models.Mapping
             // Properties
             this.Property(t => t.Producer_ID)
                 .IsRequired()
-                .HasMaxLength(50)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+                .HasMaxLength(50);
 
             this.Property(t => t.Producer_Name)
                 .HasMaxLength(50);

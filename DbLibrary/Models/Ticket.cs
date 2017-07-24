@@ -13,8 +13,8 @@ namespace DbLibrary.Models
         public int Ticket_ID { get; set; }
         public Nullable<int> Flight_No { get; set; }
         public Nullable<int> Seat_No { get; set; }
-        public Nullable<int> Airplane_ID { get; set; }
         public Nullable<int> Price { get; set; }
+        public Nullable<int> Airplane_ID { get; set; }
         public virtual AirplaneSeat AirplaneSeat { get; set; }
         public virtual ICollection<Booking> Bookings { get; set; }
         public virtual Flight Flight { get; set; }

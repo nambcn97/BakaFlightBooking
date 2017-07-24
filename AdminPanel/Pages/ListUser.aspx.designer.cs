@@ -10,16 +10,16 @@
 namespace AdminPanel.Pages {
     
     
-    public partial class ListPassenger {
+    public partial class ListUser {
         
         /// <summary>
-        /// grvPassenger control.
+        /// grvUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvPassenger;
+        protected global::System.Web.UI.WebControls.GridView grvUser;
         
         /// <summary>
         /// btnAdd control.

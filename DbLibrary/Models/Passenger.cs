@@ -8,7 +8,6 @@ namespace DbLibrary.Models
         public Passenger()
         {
             this.Bookings = new List<Booking>();
-            this.Users = new List<User>();
         }
 
         public int PassengerID { get; set; }
@@ -20,6 +19,5 @@ namespace DbLibrary.Models
         public string Street { get; set; }
         public string Location_City { get; set; }
         public virtual ICollection<Booking> Bookings { get; set; }
-        public virtual ICollection<User> Users { get; set; }
     }
 }

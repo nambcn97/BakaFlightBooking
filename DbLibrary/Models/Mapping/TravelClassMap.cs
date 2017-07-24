@@ -11,9 +11,6 @@ namespace DbLibrary.Models.Mapping
             this.HasKey(t => t.Travel_Class_ID);
 
             // Properties
-            this.Property(t => t.Travel_Class_ID)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-
             this.Property(t => t.Name)
                 .HasMaxLength(50);
 

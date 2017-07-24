@@ -1,16 +1,19 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ListPassenger.aspx.cs" Inherits="AdminPanel.Pages.ListFlight" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ListPassenger.aspx.cs" Inherits="AdminPanel.Pages.ListPassenger" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:GridView ID="grdFlights" runat="server" AutoGenerateColumns="false" ItemType="DbLibrary.Models.Flight" DataKeyNames="Flight_No" CssClass="table table-bordered">
+    <asp:GridView ID="grvPassenger" runat="server" AutoGenerateColumns="False" ItemType="DbLibrary.Models.Passenger" DataKeyNames="PassengerID" CssClass="table table-bordered">
         <Columns>
-            <asp:BoundField DataField="Flight_No" HeaderText="Flight No" />
-            <asp:BoundField DataField="Departure_DateTime" HeaderText="Departure DateTime" />
-            <asp:BoundField DataField="Arrival_DateTime" HeaderText="Arrival DateTime" />
-            <asp:BoundField DataField="Route_ID" HeaderText="Route ID" />
-            <asp:BoundField DataField="Airplane_ID" HeaderText="Airplane ID" />
+            <asp:BoundField DataField="PassengerID" HeaderText="Passenger Id" />
+            <asp:BoundField DataField="FullName" HeaderText="Full name" />
+            <asp:BoundField DataField="Age" HeaderText="Age" />
+            <asp:BoundField DataField="Gender" HeaderText="Gender" />
+            <asp:BoundField DataField="Tel" HeaderText="Tel" />
+            <asp:BoundField DataField="Email" HeaderText="Email" />
+            <asp:BoundField DataField="Street" HeaderText="Street" />
+            <asp:BoundField DataField="Location_City" HeaderText="City" />
             <asp:TemplateField HeaderText="Actions" >
                 <ItemTemplate>
-                    <asp:LinkButton runat="server" ID="btnUpdate" Text="Update" CommandArgument='<%# Eval("Flight_No") %>' OnCommand="btnUpdate_Command" />
-                    <asp:LinkButton runat="server" ID="btnDelete" Text="Delete" CommandArgument='<%# Eval("Flight_No") %>' OnCommand="btnDelete_Command" />
+                    <asp:LinkButton runat="server" ID="btnUpdate" Text="Update" CommandArgument='<%# Eval("PassengerID") %>' OnCommand="btnUpdate_Command" />
+                    <asp:LinkButton runat="server" ID="btnDelete" Text="Delete" CommandArgument='<%# Eval("PassengerID") %>' OnCommand="btnDelete_Command" />
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
@@ -18,6 +21,6 @@
             <asp:Label runat="server" Text="No result." />
         </EmptyDataTemplate>
     </asp:GridView>
-    <asp:HyperLink ID="btnAdd" runat="server" NavigateUrl="~/Pages/AddFlight.aspx" CssClass="btn btn-primary" Text="Add flight"/>
+    <asp:HyperLink ID="btnAdd" runat="server" NavigateUrl="~/Pages/AddPassenger.aspx" CssClass="btn btn-primary" Text="Add passenger"/>
 
 </asp:Content>

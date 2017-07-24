@@ -11,8 +11,8 @@ namespace DbLibrary.Models.Mapping
             this.HasKey(t => t.Payment_ID);
 
             // Properties
-            this.Property(t => t.Payment_ID)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            this.Property(t => t.Username)
+                .HasMaxLength(15);
 
             // Table & Column Mappings
             this.ToTable("Payment");
@@ -20,11 +20,15 @@ namespace DbLibrary.Models.Mapping
             this.Property(t => t.Booking_ID).HasColumnName("Booking_ID");
             this.Property(t => t.Payment_Amount).HasColumnName("Payment_Amount");
             this.Property(t => t.Payment_Date).HasColumnName("Payment_Date");
+            this.Property(t => t.Username).HasColumnName("Username");
 
             // Relationships
             this.HasOptional(t => t.Booking)
                 .WithMany(t => t.Payments)
                 .HasForeignKey(d => d.Booking_ID);
+            this.HasOptional(t => t.User)
+                .WithMany(t => t.Payments)
+                .HasForeignKey(d => d.Username);
 
         }
     }

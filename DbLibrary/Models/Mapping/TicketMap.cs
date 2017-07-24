@@ -11,16 +11,13 @@ namespace DbLibrary.Models.Mapping
             this.HasKey(t => t.Ticket_ID);
 
             // Properties
-            this.Property(t => t.Ticket_ID)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-
             // Table & Column Mappings
             this.ToTable("Ticket");
             this.Property(t => t.Ticket_ID).HasColumnName("Ticket_ID");
             this.Property(t => t.Flight_No).HasColumnName("Flight_No");
             this.Property(t => t.Seat_No).HasColumnName("Seat_No");
-            this.Property(t => t.Airplane_ID).HasColumnName("Airplane_ID");
             this.Property(t => t.Price).HasColumnName("Price");
+            this.Property(t => t.Airplane_ID).HasColumnName("Airplane_ID");
 
             // Relationships
             this.HasOptional(t => t.AirplaneSeat)

@@ -9,6 +9,8 @@ namespace DbLibrary.Models
         public Nullable<int> Booking_ID { get; set; }
         public Nullable<int> Payment_Amount { get; set; }
         public Nullable<System.DateTime> Payment_Date { get; set; }
+        public string Username { get; set; }
         public virtual Booking Booking { get; set; }
+        public virtual User User { get; set; }
     }
 }

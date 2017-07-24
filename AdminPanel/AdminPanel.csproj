@@ -212,6 +212,9 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Login.aspx" />
     <Content Include="Pages\AddAirplaneSeats.aspx" />
+    <Content Include="Pages\ListUser.aspx" />
+    <Content Include="Pages\UpdatePassenger.aspx" />
+    <Content Include="Pages\AddPassenger.aspx" />
     <Content Include="Pages\AddAirport.aspx" />
     <Content Include="Pages\AddFlight.aspx" />
     <Content Include="Pages\AddLocation.aspx" />
@@ -235,6 +238,7 @@
     <Content Include="Pages\UpdateProducer.aspx" />
     <Content Include="Pages\UpdateRoute.aspx" />
     <Content Include="Pages\UpdateTravelClass.aspx" />
+    <Content Include="Pages\UpdateUser.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -424,6 +428,27 @@
     <Compile Include="Pages\AddAirplaneSeats.aspx.designer.cs">
       <DependentUpon>AddAirplaneSeats.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ListUser.aspx.cs">
+      <DependentUpon>ListUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ListUser.aspx.designer.cs">
+      <DependentUpon>ListUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UpdatePassenger.aspx.cs">
+      <DependentUpon>UpdatePassenger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UpdatePassenger.aspx.designer.cs">
+      <DependentUpon>UpdatePassenger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddPassenger.aspx.cs">
+      <DependentUpon>AddPassenger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddPassenger.aspx.designer.cs">
+      <DependentUpon>AddPassenger.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AddAirport.aspx.cs">
       <DependentUpon>AddAirport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -584,6 +609,13 @@
     </Compile>
     <Compile Include="Pages\UpdateTravelClass.aspx.designer.cs">
       <DependentUpon>UpdateTravelClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UpdateUser.aspx.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UpdateUser.aspx.designer.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

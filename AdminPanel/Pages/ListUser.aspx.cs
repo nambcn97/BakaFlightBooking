@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace AdminPanel.Pages
 {
-    public partial class ListPassenger : System.Web.UI.Page
+    public partial class ListUser : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,31 +17,30 @@ namespace AdminPanel.Pages
                 DisplayData();
             }
         }
-
         public void DisplayData()
         {
             var db = new AirlineTicketBookingDBContext();
-            var query = from passenger in db.Passengers orderby passenger.PassengerID ascending select passenger;
-            grvPassenger.DataSource = query.ToList();
-            grvPassenger.DataBind();
+            var query = from user in db.Users select user;
+            grvUser.DataSource = query.ToList();
+            grvUser.DataBind();
         }
 
         protected void btnUpdate_Command(object sender, CommandEventArgs e)
         {
-            int id = Int32.Parse(e.CommandArgument.ToString());
-            Response.Redirect(string.Format("~/Pages/UpdatePassenger.aspx?Id={0}", id));
+            string id = e.CommandArgument.ToString();
+            Response.Redirect(string.Format("~/Pages/UpdateUser.aspx?Id={0}", id));
         }
 
         protected void btnDelete_Command(object sender, CommandEventArgs e)
         {
-            int id = Int32.Parse(e.CommandArgument.ToString());
+            string id = e.CommandArgument.ToString();
             using (var db = new AirlineTicketBookingDBContext())
             {
-                var passenger = new Passenger() { PassengerID = id };
-                db.Passengers.Attach(passenger);
-                db.Passengers.Remove(passenger);
+                var user = new User() { Username = id };
+                db.Users.Attach(user);
+                db.Users.Remove(user);
                 db.SaveChanges();
-                Response.Redirect("~/Pages/ListPassenger.aspx");
+                Response.Redirect("~/Pages/ListUser.aspx");
             }
         }
     }

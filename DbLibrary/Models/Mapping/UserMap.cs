@@ -20,16 +20,9 @@ namespace DbLibrary.Models.Mapping
 
             // Table & Column Mappings
             this.ToTable("User");
-            this.Property(t => t.PassengerID).HasColumnName("PassengerID");
             this.Property(t => t.Username).HasColumnName("Username");
             this.Property(t => t.Password).HasColumnName("Password");
             this.Property(t => t.Wallet).HasColumnName("Wallet");
-
-            // Relationships
-            this.HasOptional(t => t.Passenger)
-                .WithMany(t => t.Users)
-                .HasForeignKey(d => d.PassengerID);
-
         }
     }
 }

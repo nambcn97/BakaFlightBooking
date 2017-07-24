@@ -11,9 +11,6 @@ namespace DbLibrary.Models.Mapping
             this.HasKey(t => t.Route_ID);
 
             // Properties
-            this.Property(t => t.Route_ID)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-
             // Table & Column Mappings
             this.ToTable("Route");
             this.Property(t => t.Route_ID).HasColumnName("Route_ID");
@@ -24,10 +21,10 @@ namespace DbLibrary.Models.Mapping
             // Relationships
             this.HasOptional(t => t.Airport)
                 .WithMany(t => t.Routes)
-                .HasForeignKey(d => d.Origin_Airport);
+                .HasForeignKey(d => d.Destination_Airport);
             this.HasOptional(t => t.Airport1)
                 .WithMany(t => t.Routes1)
-                .HasForeignKey(d => d.Destination_Airport);
+                .HasForeignKey(d => d.Origin_Airport);
 
         }
     }
