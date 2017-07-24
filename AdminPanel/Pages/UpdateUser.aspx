@@ -4,8 +4,7 @@
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="MainContent">
     <div class="form-group">
         <asp:Label runat="server" Text="Username" ID="Label3" />
-        <asp:TextBox runat="server" ID="txtUsername" CssClass="form-control" />
-        <asp:RequiredFieldValidator runat="server" ControlToValidate="txtUsername" ErrorMessage="Username is required" Display="Dynamic" CssClass="text-danger" ID="RequiredFieldValidator3" />
+        <asp:TextBox runat="server" ID="txtUsername" CssClass="form-control" ReadOnly="True" />
     </div>
     <div class="form-group">
         <asp:Label runat="server" Text="Password" ID="Label1" />

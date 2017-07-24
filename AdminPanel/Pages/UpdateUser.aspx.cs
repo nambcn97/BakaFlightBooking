@@ -12,6 +12,10 @@ namespace AdminPanel.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["admin"] == null)
+            {
+                Response.Redirect("../Login.aspx");
+            }
             if (!IsPostBack)
             {
                 if (Request.QueryString["Id"] == null) Response.Redirect("~/Pages/ListUser.aspx");
@@ -37,7 +41,6 @@ namespace AdminPanel.Pages
                 var user = db.Users.Find(id);
                 if (user != null)
                 {
-                    user.Username = txtUsername.Text;
                     user.Password = txtPassword.Text;
                     user.Wallet = int.Parse(txtWaller.Text);
                     db.SaveChanges();

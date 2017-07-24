@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ListRoute.aspx.cs" Inherits="AdminPanel.Pages.ListRoute1" %>
 
 <asp:Content ID="Content1" runat="server" contentplaceholderid="MainContent">
-    <asp:GridView ID="grvRoute" runat="server" AutoGenerateColumns="False" CssClass="table table-border" ItemType="DbLibrary.Models.Route" SelectMethod="grdRoute_GetData">
+    <asp:GridView ID="grvRoute" runat="server" AutoGenerateColumns="False" CssClass="table table-border" SelectMethod="grdRoute_GetData">
         <Columns>
             <asp:BoundField DataField="Route_ID" HeaderText="Route ID"/>
             <asp:BoundField DataField="Origin_Airport" HeaderText="Origin Airport" />

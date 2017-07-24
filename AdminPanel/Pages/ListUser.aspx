@@ -1,15 +1,15 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ListUser.aspx.cs" Inherits="AdminPanel.Pages.ListUser" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:GridView ID="grvUser" runat="server" AutoGenerateColumns="False" ItemType="DbLibrary.Models.Airport" DataKeyNames="Airport_ID" CssClass="table table-bordered">
+    <asp:GridView ID="grvUser" runat="server" AutoGenerateColumns="False" ItemType="DbLibrary.Models.User" DataKeyNames="Username" CssClass="table table-bordered">
         <Columns>
             <asp:BoundField DataField="Username" HeaderText="Username" />
             <asp:BoundField DataField="Password" HeaderText="Password" />
             <asp:BoundField DataField="Wallet" HeaderText="Wallet" />
             <asp:TemplateField HeaderText="Actions" >
                 <ItemTemplate>
-                    <asp:LinkButton runat="server" ID="btnUpdate" Text="Update" CommandArgument='<%# Eval("Airport_ID") %>' OnCommand="btnUpdate_Command" />
-                    <asp:LinkButton runat="server" ID="btnDelete" Text="Delete" CommandArgument='<%# Eval("Airport_ID") %>' OnCommand="btnDelete_Command" />
+                    <asp:LinkButton runat="server" ID="btnUpdate" Text="Update" CommandArgument='<%# Eval("Username") %>' OnCommand="btnUpdate_Command" />
+                    <asp:LinkButton runat="server" ID="btnDelete" Text="Delete" CommandArgument='<%# Eval("Username") %>' OnCommand="btnDelete_Command" />
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>

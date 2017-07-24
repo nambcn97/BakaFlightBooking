@@ -12,12 +12,25 @@ namespace AdminPanel.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["admin"] == null)
+            {
+                Response.Redirect("../Login.aspx");
+            }
         }
-        public IQueryable<Route> grdRoute_GetData()
+        public IQueryable grdRoute_GetData()
         {
             var db = new AirlineTicketBookingDBContext();
-            var query = from route in db.Routes select route;
+            var query = from route in db.Routes
+                        from airport1 in db.Airports
+                        from airport2 in db.Airports
+                        where route.Origin_Airport == airport1.Airport_ID && route.Destination_Airport == airport2.Airport_ID
+                        select new
+                        {
+                            Route_ID = route.Route_ID,
+                            Origin_Airport = airport1.Airport_Name,
+                            Destination_Airport = airport2.Airport_Name,
+                            Distance = route.Distance
+                        };
             return query;
         }
         protected void btnUpdate_Command(object sender, CommandEventArgs e)
@@ -28,7 +41,7 @@ namespace AdminPanel.Pages
 
         protected void btnDelete_Command(object sender, CommandEventArgs e)
         {
-            int id = (int)e.CommandArgument;
+            int id = int.Parse(e.CommandArgument.ToString());
             using (var db = new AirlineTicketBookingDBContext())
             {
                 var route = new Route() { Route_ID = id };

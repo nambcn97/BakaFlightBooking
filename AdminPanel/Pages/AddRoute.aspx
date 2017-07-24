@@ -1,14 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddRoute.aspx.cs" Inherits="AdminPanel.Pages.ListRoute" %>
 
 <asp:Content ID="Content1" runat="server" contentplaceholderid="MainContent">
-    <br />
-    <div class="form-group">
-        <asp:Label runat="server" Text="Route_ID" />
-        <asp:TextBox runat="server" ID="txtID" CssClass="form-control" />
-        <asp:RequiredFieldValidator runat="server" ControlToValidate="txtID" ErrorMessage="Route ID is required" Display="Dynamic" CssClass="text-danger" />
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtID" CssClass="text-danger" Display="Dynamic" ErrorMessage="Route ID must be an integer" ValidationExpression="[0-9]+"></asp:RegularExpressionValidator>
-        
-    </div>
     <div class="form-group">
         <asp:Label runat="server" Text="Origin_Airport" />
         <asp:DropDownList runat="server" ID="ddlOriginAirport" CssClass="form-control" ItemType="DbLibrary.Models.Airport" SelectMethod="ddlAirport_GetData" AppendDataBoundItems="true" DataValueField="Airport_ID" DataTextField="Airport_Name" />

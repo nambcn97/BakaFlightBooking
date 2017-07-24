@@ -12,7 +12,10 @@ namespace AdminPanel.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["admin"] == null)
+            {
+                Response.Redirect("../Login.aspx");
+            }
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {

@@ -12,7 +12,10 @@ namespace AdminPanel.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["admin"] == null)
+            {
+                Response.Redirect("../Login.aspx");
+            }
         }
         public IQueryable<Airport> ddlAirport_GetData()
         {
@@ -23,16 +26,16 @@ namespace AdminPanel.Pages
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            int route_ID = int.Parse(txtID.Text);
             int origin_Airport = int.Parse(ddlOriginAirport.SelectedValue);
             int destination_Airport = int.Parse(ddlDestinationAirport.SelectedValue);
+            int distance = int.Parse(txtDistance.Text);
             using (AirlineTicketBookingDBContext db = new AirlineTicketBookingDBContext())
             {
                 var route = new Route()
                 {
-                    Route_ID = route_ID,
                     Origin_Airport = origin_Airport,
-                    Destination_Airport = destination_Airport
+                    Destination_Airport = destination_Airport,
+                    Distance = distance
                 };
                 db.Routes.Add(route);
                 db.SaveChanges();

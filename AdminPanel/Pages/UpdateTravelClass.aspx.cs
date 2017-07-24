@@ -12,6 +12,10 @@ namespace AdminPanel.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["admin"] == null)
+            {
+                Response.Redirect("../Login.aspx");
+            }
             if (!IsPostBack)
             {
                 int id = Int32.Parse(Request.QueryString["Id"].ToString());
