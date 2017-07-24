@@ -2,7 +2,6 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using DbLibrary.Models.Mapping;
 using DbLibrary.DAO;
-
 namespace DbLibrary.Models
 {
     public partial class AirlineTicketBookingDBContext : DbContext
@@ -23,7 +22,6 @@ namespace DbLibrary.Models
         public DbSet<AirplaneSeat> AirplaneSeats { get; set; }
         public DbSet<Airport> Airports { get; set; }
         public DbSet<Booking> Bookings { get; set; }
-        public DbSet<Card> Cards { get; set; }
         public DbSet<Flight> Flights { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<Passenger> Passengers { get; set; }
@@ -42,7 +40,6 @@ namespace DbLibrary.Models
             modelBuilder.Configurations.Add(new AirplaneSeatMap());
             modelBuilder.Configurations.Add(new AirportMap());
             modelBuilder.Configurations.Add(new BookingMap());
-            modelBuilder.Configurations.Add(new CardMap());
             modelBuilder.Configurations.Add(new FlightMap());
             modelBuilder.Configurations.Add(new LocationMap());
             modelBuilder.Configurations.Add(new PassengerMap());

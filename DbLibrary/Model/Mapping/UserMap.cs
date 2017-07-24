@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
 
 namespace DbLibrary.Models.Mapping
@@ -23,7 +23,6 @@ namespace DbLibrary.Models.Mapping
             this.Property(t => t.PassengerID).HasColumnName("PassengerID");
             this.Property(t => t.Username).HasColumnName("Username");
             this.Property(t => t.Password).HasColumnName("Password");
-            this.Property(t => t.Wallet).HasColumnName("Wallet");
 
             // Relationships
             this.HasOptional(t => t.Passenger)
