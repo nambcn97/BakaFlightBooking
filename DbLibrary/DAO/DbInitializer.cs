@@ -7,7 +7,7 @@ using DbLibrary.Models;
 
 namespace DbLibrary.DAO
 {
-    public class DbInitializer : DropCreateDatabaseIfModelChanges<AirlineTicketBookingDBContext>
+    public class DbInitializer : CreateDatabaseIfNotExists<AirlineTicketBookingDBContext>
     {
         protected override void Seed(AirlineTicketBookingDBContext context)
         {
@@ -37,6 +37,12 @@ namespace DbLibrary.DAO
             context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 3, Name = "Premium Class" });
             context.TravelClasses.Add(new TravelClass() { Travel_Class_ID = 4, Name = "Economy Class" });
             context.SaveChanges();
+
+            context.Routes.Add(new Route() { Route_ID = 1, Origin_Airport = 1, Destination_Airport = 2, Distance = 150 });
+            context.Routes.Add(new Route() { Route_ID = 2, Origin_Airport = 1, Destination_Airport = 3, Distance = 250 });
+            context.Routes.Add(new Route() { Route_ID = 3, Origin_Airport = 2, Destination_Airport = 3, Distance = 350 });
+            context.SaveChanges();
+
             base.Seed(context);
         }
     }
