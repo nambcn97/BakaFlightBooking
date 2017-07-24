@@ -212,6 +212,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Login.aspx" />
     <Content Include="Pages\AddAirplaneSeats.aspx" />
+    <Content Include="Pages\AddUser.aspx" />
     <Content Include="Pages\ListUser.aspx" />
     <Content Include="Pages\UpdatePassenger.aspx" />
     <Content Include="Pages\AddPassenger.aspx" />
@@ -427,6 +428,13 @@
     </Compile>
     <Compile Include="Pages\AddAirplaneSeats.aspx.designer.cs">
       <DependentUpon>AddAirplaneSeats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ListUser.aspx.cs">
       <DependentUpon>ListUser.aspx</DependentUpon>
