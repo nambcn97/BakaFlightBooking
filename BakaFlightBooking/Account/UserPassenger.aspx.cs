@@ -56,7 +56,7 @@ namespace BakaFlightBooking.Account
 
         protected void btnContinue_Click(object sender, EventArgs e)
         {
-            Response.Redirect("UserCheckOut.aspx");
+            Response.Redirect("UserChoosingSeat.aspx");
         }
     }
 }

@@ -184,8 +184,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Account\UserCartManaging.aspx" />
     <Content Include="Account\UserCheckOut.aspx" />
+    <Content Include="Account\UserChoosingSeat.aspx" />
     <Content Include="Account\UserConfirmation.aspx" />
     <Content Include="Account\UserFlightBooking.aspx" />
     <Content Include="Account\Lockout.aspx" />
@@ -199,6 +199,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\UserPassenger.aspx" />
+    <Content Include="Account\UserSearch.aspx" />
     <Content Include="Account\UserYourTrip.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Contact.aspx" />
@@ -264,19 +265,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\UserCartManaging.aspx.cs">
-      <DependentUpon>UserCartManaging.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\UserCartManaging.aspx.designer.cs">
-      <DependentUpon>UserCartManaging.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Account\UserCheckOut.aspx.cs">
       <DependentUpon>UserCheckOut.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\UserCheckOut.aspx.designer.cs">
       <DependentUpon>UserCheckOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UserChoosingSeat.aspx.cs">
+      <DependentUpon>UserChoosingSeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UserChoosingSeat.aspx.designer.cs">
+      <DependentUpon>UserChoosingSeat.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\UserConfirmation.aspx.cs">
       <DependentUpon>UserConfirmation.aspx</DependentUpon>
@@ -368,6 +369,13 @@
     </Compile>
     <Compile Include="Account\UserPassenger.aspx.designer.cs">
       <DependentUpon>UserPassenger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UserSearch.aspx.cs">
+      <DependentUpon>UserSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UserSearch.aspx.designer.cs">
+      <DependentUpon>UserSearch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\UserYourTrip.aspx.cs">
       <DependentUpon>UserYourTrip.aspx</DependentUpon>

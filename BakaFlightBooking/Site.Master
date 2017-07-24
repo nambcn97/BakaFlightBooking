@@ -68,7 +68,7 @@
                             {
                         %>
                         <!--Có thanh search để search các chuyến bay, List of Flights-->
-                        <li><a runat="server" href="~/Account/UserFlightBooking.aspx">Book A Flight</a></li>
+                        <li><a runat="server" href="~/Account/UserSearch.aspx">Book A Flight</a></li>
                         <!--Search info của chuyến bay đã đặt-->
                         <li><a runat="server" href="~/Account/UserYourTrip.aspx">Find My Trip</a></li>
                         <%
