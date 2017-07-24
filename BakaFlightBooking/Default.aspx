@@ -1,8 +1,99 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="FlightBookingWebsite._Default" %>
 
 <asp:Content ID="HeadContent" ContentPlaceHolderID="CustomHead" runat="server">
+    <style type="text/css">
+        .fancy { font-family: fantasy; 
+        }
+      
+        .auto-style2 {
+            position: relative;
+            min-height: 1px;
+            width: 100%;
+            left: 1px;
+            top: -16px;
+            height: 190px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .auto-style5 {
+            height: 60px;
+            width: 350px;
+        }
+        .auto-style6 {
+            height: 60px;
+            width: 140px;
+        }
+      
+    </style>
 </asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <br />
+    <h1 class="fancy">ONLINE BOOKING</h1>
+    <br />
+    <div class="auto-style2">
+        <table  border="0" style="border:none;">
+            <tr>
+                <td class="auto-style6">
+                    <asp:Label runat="server" CssClass="control-label">
+                    From
+                    </asp:Label></td>
+                <td class="auto-style5">
+                    <asp:DropDownList class="form-control" ID="drpOrigin" DataValueField="Id" DataTextField="Descreption" runat="server" Height="40px" Width="220px"></asp:DropDownList>
+                </td>
+                <td class="auto-style6">To
+                </td>
+                <td class="auto-style5">
+                    <asp:DropDownList class="form-control" ID="drpDestination" DataValueField="Id" DataTextField="Descreption" runat="server" Height="40px" Width="220px"></asp:DropDownList>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style6">
+                    <br />
+                    Depart
+                </td>
+                <td class="auto-style5">
+                  
+                    <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Please enter valid date" OnServerValidate="CustomValidator1_ServerValidate" BorderColor="Red" ForeColor="Red"></asp:CustomValidator>
+                    
+                    <asp:TextBox ID="txtDepart" class="form-control" type="date" runat="server" Height="40px" Width="220px"></asp:TextBox>
+                  
+                </td>
+                <td class="auto-style6">
+                    <br />
+                    Arrival
+                </td>
+                <td class="auto-style5">
+                     
+                    <asp:CustomValidator ID="CustomValidator2" runat="server" ErrorMessage="Please enter valid date" ForeColor="Red" OnServerValidate="CustomValidator2_ServerValidate"></asp:CustomValidator>
+                     
+                    <asp:TextBox ID="txtArrival" class="form-control" type="date" runat="server" Height="40px" Width="220px"></asp:TextBox>
+                     
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style6">
+                    Class Travel:
+                </td>
+                <td class="auto-style5">
+
+                    <asp:DropDownList class="form-control" ID="DropDownList1" runat="server" Height="40px" Width="220px">
+                        <asp:ListItem>Bussiness Class</asp:ListItem>
+                        <asp:ListItem>Economy Class</asp:ListItem>
+                    </asp:DropDownList>
+
+                </td>
+                <td class="auto-style6">
+
+                    &nbsp;</td>
+                <td class="auto-style5">
+
+                    <asp:Button class="btn btn-danger navbar-form navbar-right form-control" ID="btnFind" runat="server" Text="Find Flight" Height="40px" Width="150px" OnClick="btnFind_Click"/>
+
+                </td>
+            </tr>
+            </table>
+    </div>
+    <br/>
     <div class="row">
         <div class="col-sm-12">
             <div id="main-carousel" class="carousel slide" data-ride="carousel">
