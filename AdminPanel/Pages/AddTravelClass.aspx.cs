@@ -20,7 +20,6 @@ namespace AdminPanel.Pages
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            int travelclass_ID = Int32.Parse(txtTravelClassID.Text);
             string name = txtName.Text;
             string description = txtDescription.Text;
 
@@ -28,7 +27,6 @@ namespace AdminPanel.Pages
             {
                 var travelclass = new TravelClass()
                 {
-                    Travel_Class_ID = travelclass_ID,
                     Name = name,
                     Description = description
                 };

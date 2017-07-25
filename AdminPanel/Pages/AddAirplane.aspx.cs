@@ -27,7 +27,6 @@ namespace AdminPanel.Pages
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            int airplane_ID = int.Parse(txtAirplaneID.Text);
             string producer_ID = drpProducer.SelectedValue;
             int seat_Numbers = int.Parse(txtSeatNumbers.Text);
             using (AirlineTicketBookingDBContext db = new AirlineTicketBookingDBContext())
@@ -35,7 +34,6 @@ namespace AdminPanel.Pages
                 //var producer = db.Producers.Find(producer_ID);
                 var airplane = new Airplane()
                 {
-                    Airplane_ID = airplane_ID,
                     Producer_ID = producer_ID,
                     Seat_Numbers = seat_Numbers
                 };

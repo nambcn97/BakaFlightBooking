@@ -51,7 +51,6 @@ namespace AdminPanel.Pages
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            int ticket_ID = int.Parse(txtTicketID.Text);
             int flight_No = int.Parse(drpFlightNo.SelectedValue);
             int seat_No = int.Parse(drpSeatNo.SelectedValue);
             int airplane_ID = int.Parse(txtAirplaneID.Text);
@@ -60,7 +59,6 @@ namespace AdminPanel.Pages
             {
                 var ticket = new Ticket()
                 {
-                    Ticket_ID = ticket_ID,
                     Flight_No = flight_No,
                     Seat_No = seat_No,
                     Airplane_ID = airplane_ID,

@@ -1,10 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddTicket.aspx.cs" Inherits="AdminPanel.Pages.AddTicket" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-group">
-        <asp:Label runat="server" Text="Ticket ID" />
-        <asp:TextBox runat="server" ID="txtTicketID" CssClass="form-control" />
-    </div>
-    <div class="form-group">
         <asp:Label runat="server" Text="Flight No" />
         <asp:DropDownList runat="server" ID="drpFlightNo" CssClass="form-control" ItemType="DbLibrary.Models.Flight" AppendDataBoundItems="true" DataValueField="Flight_No" DataTextField="Flight_No" OnSelectedIndexChanged="drpFlightNo_SelectedIndexChanged" AutoPostBack="True" />
     </div>
