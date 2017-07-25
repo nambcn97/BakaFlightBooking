@@ -221,6 +221,7 @@
     <Content Include="Pages\AddLocation.aspx" />
     <Content Include="Pages\AddAirplane.aspx" />
     <Content Include="Pages\AddProducer.aspx" />
+    <Content Include="Pages\AddTicket.aspx" />
     <Content Include="Pages\AddTravelClass.aspx" />
     <Content Include="Pages\ListAirplane.aspx" />
     <Content Include="Pages\ListAirplaneSeats.aspx" />
@@ -231,6 +232,7 @@
     <Content Include="Pages\ListProducer.aspx" />
     <Content Include="Pages\AddRoute.aspx" />
     <Content Include="Pages\ListRoute.aspx" />
+    <Content Include="Pages\ListTicket.aspx" />
     <Content Include="Pages\ListTravelClass.aspx" />
     <Content Include="Pages\UpdateAirplane.aspx" />
     <Content Include="Pages\UpdateAirplaneSeat.aspx" />
@@ -492,6 +494,13 @@
     <Compile Include="Pages\AddProducer.aspx.designer.cs">
       <DependentUpon>AddProducer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AddTicket.aspx.cs">
+      <DependentUpon>AddTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddTicket.aspx.designer.cs">
+      <DependentUpon>AddTicket.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AddTravelClass.aspx.cs">
       <DependentUpon>AddTravelClass.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -561,6 +570,13 @@
     </Compile>
     <Compile Include="Pages\ListRoute.aspx.designer.cs">
       <DependentUpon>ListRoute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListTicket.aspx.cs">
+      <DependentUpon>ListTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ListTicket.aspx.designer.cs">
+      <DependentUpon>ListTicket.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ListTravelClass.aspx.cs">
       <DependentUpon>ListTravelClass.aspx</DependentUpon>

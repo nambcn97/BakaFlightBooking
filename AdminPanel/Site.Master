@@ -59,6 +59,7 @@
                         <li><a runat="server" href="~/Pages/ListFlight.aspx">Flight</a></li>
                         <li><a runat="server" href="~/Pages/ListUser.aspx">User</a></li>
                         <li><a runat="server" href="~/Pages/ListPassenger.aspx">Passenger</a></li>
+                        <li><a runat="server" href="~/Pages/ListTicket.aspx">Ticket</a></li>
                     </ul>
                     <% 
                         if (isLogged())

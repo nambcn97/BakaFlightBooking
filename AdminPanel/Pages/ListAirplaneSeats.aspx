@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ListAirplaneSeats.aspx.cs" Inherits="AdminPanel.Pages.ListAirplaneSeats" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:GridView ID="grdAirplaneSeats" runat="server" AutoGenerateColumns="false" ItemType="DbLibrary.Models.AirplaneSeat" DataKeyNames="Airplane_ID,Seat_No" CssClass="table table-bordered">
+    <asp:GridView ID="grdAirplaneSeats" runat="server" AutoGenerateColumns="false" DataKeyNames="Airplane_ID,Seat_No" CssClass="table table-bordered">
         <Columns>
             <asp:BoundField DataField="Airplane_ID" HeaderText="Airplane ID" />
             <asp:BoundField DataField="Seat_No" HeaderText="Seat No" />
-            <asp:BoundField DataField="Travel_Class_ID" HeaderText="Travel Class ID" />
+            <asp:BoundField DataField="Name" HeaderText="Travel Class ID" />
             <asp:TemplateField HeaderText="Actions" >
                 <ItemTemplate>
                     <asp:LinkButton runat="server" ID="btnUpdate" Text="Update" CommandArgument='<%# Eval("Airplane_ID") + "," + Eval("Seat_No") %>' OnCommand="btnUpdate_Command" />

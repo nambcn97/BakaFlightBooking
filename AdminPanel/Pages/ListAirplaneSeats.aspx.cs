@@ -24,9 +24,16 @@ namespace AdminPanel.Pages
 
         public void DisplayData()
         {
-            var db = new AirlineTicketBookingDBContext();
-            var query = from airplaneseat in db.AirplaneSeats orderby airplaneseat.Airplane_ID, airplaneseat.Seat_No select airplaneseat;
+            //var db = new AirlineTicketBookingDBContext();
+            //var query = from airplaneseat in db.AirplaneSeats orderby airplaneseat.Airplane_ID, airplaneseat.Seat_No select airplaneseat;
 
+            //grdAirplaneSeats.DataSource = query.ToList();
+            //grdAirplaneSeats.DataBind();
+
+            var db = new AirlineTicketBookingDBContext();
+            var query = from seat in db.AirplaneSeats
+                join travelclass in db.TravelClasses on seat.Travel_Class_ID equals travelclass.Travel_Class_ID
+                select new { seat.Airplane_ID, seat.Seat_No, travelclass.Name};
             grdAirplaneSeats.DataSource = query.ToList();
             grdAirplaneSeats.DataBind();
         }

@@ -10,7 +10,7 @@
     </div>
     <div class="form-group">
         <asp:Label runat="server" Text="Travel Class ID" />
-        <asp:DropDownList runat="server" ID="drpTravelClasses" CssClass="form-control" ItemType="DbLibrary.Models.TravelClass" AppendDataBoundItems="true" DataValueField="Travel_Class_ID" DataTextField="Travel_Class_ID" />
+        <asp:DropDownList runat="server" ID="drpTravelClasses" CssClass="form-control" ItemType="DbLibrary.Models.TravelClass" AppendDataBoundItems="true" DataValueField="Travel_Class_ID" DataTextField="Name" />
     </div>
     <div class="form-group">
         <asp:Button runat="server" ID="btnSave" CssClass="btn btn-primary" Text="Save" OnClick="btnUpdate_Click" />
