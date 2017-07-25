@@ -48,7 +48,7 @@
                     <asp:Label ID="lblWarn" runat="server" Text="The money in your wallet is not enough. Please Add Fund to continue booking!!!" CssClass="text-danger" Visible="False"></asp:Label>
 
                     <br />
-                       <asp:Button CssClass="btn btn-danger navbar-form  form-control" ID="btnContinue" runat="server" Text="Continue" Height="40px" Width="150px" PostBackUrl="~/Default.aspx" OnClick="btnContinue_Click" /></td>
+                       <asp:Button CssClass="btn btn-danger navbar-form  form-control" ID="btnContinue" runat="server" Text="Continue" Height="40px" Width="150px" OnClick="btnContinue_Click" /></td>
                 </div>
             </div>
         </div>

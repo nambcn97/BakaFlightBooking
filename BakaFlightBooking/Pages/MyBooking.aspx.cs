@@ -25,7 +25,8 @@ namespace BakaFlightBooking.Pages
         public void DisplayData()
         {
             var db = new AirlineTicketBookingDBContext();
-            var query = from d in db.Payments select d.Payment_ID;
+            var query = from d in db.Payments select d;
+
             grvBooking.DataSource = query.ToList();
             grvBooking.DataBind();
         }

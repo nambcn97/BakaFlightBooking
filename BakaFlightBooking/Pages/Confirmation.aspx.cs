@@ -39,22 +39,25 @@ namespace BakaFlightBooking.Pages
                 }
                 db.Passengers.Add(p);
                 db.SaveChanges();
+                var passenger_ID = (from pa in db.Passengers select pa).ToList().LastOrDefault().PassengerID;
                 //var passenger_id = from passenger in db.Passengers orderby passenger.PassengerID descending select passenger.;
                 db.Bookings.Add(new Booking()
                 {
                     Ticket_ID = ticket_id,
-                    Passenger_ID = db.Passengers.Last().PassengerID,
+                    Passenger_ID = passenger_ID,
                     Booking_Date = System.DateTime.Now
                 });
                 db.SaveChanges();
+                var booking_ID = (from pa in db.Bookings select pa).ToList().LastOrDefault().Booking_ID;
                 db.Payments.Add(new Payment()
                 {
-                    Booking_ID = db.Bookings.Last().Booking_ID,
+                    Booking_ID = booking_ID,
                     Payment_Amount = ticket.Price,
-                    Username = Session["username"].ToString()
+                    Username = Session["username"].ToString(),
+                    Payment_Date = System.DateTime.Now
                 });
                 db.SaveChanges();
-                Response.Redirect("ListBooking.aspx");
+                Response.Redirect("MyBooking.aspx");
             }
         }
     }
