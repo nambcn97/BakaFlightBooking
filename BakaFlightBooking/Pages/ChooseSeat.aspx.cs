@@ -46,6 +46,7 @@ namespace BakaFlightBooking.Pages
         protected void Choose_Click(object sender, EventArgs e)
         {
             Session["ticket_id"] = DropSeat.SelectedValue;
+            Session["flight_no"] = txtFlightNo.Text;
             Response.Redirect("~/Pages/Passengers.aspx");
         }
     }

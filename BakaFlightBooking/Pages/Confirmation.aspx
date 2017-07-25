@@ -33,13 +33,22 @@
                             <td class="auto-style8">Your Seat No
                             </td>
                             <td class="auto-style10">
-                                <asp:TextBox ID="TextBox1" runat="server" CssClass="w3-input" Width="140px" ReadOnly="true"></asp:TextBox>
+                                <asp:TextBox ID="txtSeatNo" runat="server" CssClass="w3-input" Width="140px" ReadOnly="true"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr class="alightTable">
+                            <td class="auto-style8">Amount
+                            </td>
+                            <td class="auto-style10">
+                                <asp:TextBox ID="txtAmount" runat="server" CssClass="w3-input" Width="140px" ReadOnly="true"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
 
+                    <asp:Label ID="lblWarn" runat="server" Text="The money in your wallet is not enough. Please Add Fund to continue booking!!!" CssClass="text-danger" Visible="False"></asp:Label>
+
                     <br />
-                       <asp:Button CssClass="btn btn-danger navbar-form  form-control" ID="btnContinue" runat="server" Text="Continue" Height="40px" Width="150px" PostBackUrl="~/Default.aspx" /></td>
+                       <asp:Button CssClass="btn btn-danger navbar-form  form-control" ID="btnContinue" runat="server" Text="Continue" Height="40px" Width="150px" PostBackUrl="~/Default.aspx" OnClick="btnContinue_Click" /></td>
                 </div>
             </div>
         </div>

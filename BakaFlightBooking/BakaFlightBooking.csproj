@@ -214,6 +214,7 @@
     <Content Include="Pages\AddFund.aspx" />
     <Content Include="Pages\ChooseSeat.aspx" />
     <Content Include="Pages\Confirmation.aspx" />
+    <Content Include="Pages\MyBooking.aspx" />
     <Content Include="Pages\LogOut.aspx" />
     <Content Include="Pages\Passengers.aspx" />
     <Content Include="Pages\SearchFlight.aspx" />
@@ -252,7 +253,9 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
@@ -406,6 +409,13 @@
     </Compile>
     <Compile Include="Pages\Confirmation.aspx.designer.cs">
       <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MyBooking.aspx.cs">
+      <DependentUpon>MyBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MyBooking.aspx.designer.cs">
+      <DependentUpon>MyBooking.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\LogOut.aspx.cs">
       <DependentUpon>LogOut.aspx</DependentUpon>

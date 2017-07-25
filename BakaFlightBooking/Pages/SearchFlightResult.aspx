@@ -65,7 +65,7 @@
                 </div>
                 Below Fares exclude taxes and fees
                 <div style="margin:auto">
-                    <asp:GridView ID="DepartGridView" runat="server" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True" AllowPaging="True" CssClass="active" EmptyDataText="Data is empty">
+                    <asp:GridView ID="DepartGridView" runat="server" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True" AllowPaging="True" CssClass="auto-style11" EmptyDataText="Data is empty" HorizontalAlign="Center">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                         </Columns>
@@ -107,7 +107,7 @@
                     </asp:Table>
                     <br />
                     Below Fares exclude taxes and fees 
-                    <asp:GridView ID="ArrivalGridView" runat="server" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True" AllowPaging="True" CssClass="active" EmptyDataText="Data is empty">
+                    <asp:GridView ID="ArrivalGridView" runat="server" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True" AllowPaging="True" CssClass="active" EmptyDataText="Data is empty" HorizontalAlign="Center">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <Columns>
                             </Columns>
