@@ -14,6 +14,11 @@ namespace BakaFlightBooking.Pages
         {
             if (!IsPostBack)
             {
+                if ((String) Session["hasChose"] == "1")
+                {
+                    Label1.ForeColor = System.Drawing.Color.Red;
+                    Label1.Text = "This ticket has been booked";
+                }
                 int flight_no = int.Parse(Request["id"]);
                 using (var db = new AirlineTicketBookingDBContext())
                 {
@@ -45,9 +50,24 @@ namespace BakaFlightBooking.Pages
 
         protected void Choose_Click(object sender, EventArgs e)
         {
-            Session["ticket_id"] = DropSeat.SelectedValue;
-            Session["flight_no"] = txtFlightNo.Text;
-            Response.Redirect("~/Pages/Passengers.aspx");
+            using (var db = new AirlineTicketBookingDBContext())
+            {
+                var query = from d in db.Bookings select d;
+                List<Booking> bk = query.ToList();
+                List<int> tks = new List<int>();
+                for (int i = 0; i < bk.Count; i++)
+                {
+                    tks.Add((int)bk[i].Ticket_ID);
+                }
+                if (tks.Contains(int.Parse(DropSeat.SelectedValue)))
+                {
+                    Session["hasChose"] = "1";
+                    Response.Redirect("~/Pages/ChooseSeat.aspx");
+                }
+                Session["ticket_id"] = DropSeat.SelectedValue;
+                Session["flight_no"] = txtFlightNo.Text;
+                Response.Redirect("~/Pages/Passengers.aspx");
+            }
         }
     }
 }

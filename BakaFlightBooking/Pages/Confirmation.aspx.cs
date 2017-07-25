@@ -54,7 +54,7 @@ namespace BakaFlightBooking.Pages
                     Username = Session["username"].ToString()
                 });
                 db.SaveChanges();
-                Response.Redirect("ListBooking.aspx");
+                Response.Redirect("~/Page/MyBooking.aspx");
             }
         }
     }
