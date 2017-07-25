@@ -57,7 +57,7 @@ namespace BakaFlightBooking.Pages
                     Payment_Date = System.DateTime.Now
                 });
                 db.SaveChanges();
-                Response.Redirect("MyBooking.aspx");
+                Response.Redirect("~/Page/MyBooking.aspx");
             }
         }
     }
